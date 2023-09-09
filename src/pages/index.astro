@@ -2,15 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Portafolio">
-	<main>
-		<Header />
-		<div class="flex items-center justify-center h-screen">
-			<h1 class="text-white text-3xl">Bienvenidos al portafolio del PotatoXx</h1>
-		</div>
-
-
+	<Header />
+	<main class="flex-growmb-auto">
+			<div class="flex justify-center">
+				<div class="">
+					<h1 class="text-center text-white text-3xl mb-4">Bienvenidos al portafolio del PotatoXx</h1>
+					<p class="text-center text-white">Aquí encontrarás algunos de mis proyectos</p>
+				</div>
+			</div>
 	</main>
+	<Footer />
 </Layout>
