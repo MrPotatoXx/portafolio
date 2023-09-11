@@ -51,5 +51,5 @@ Este es un proyecto personal, pero si tienes alguna sugerencia o mejora, siénte
 
 ## 📄 Licencia
 
-Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE.md](LICENSE.md) para más detalles.
+Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE.md](LICENSE) para más detalles.
 
