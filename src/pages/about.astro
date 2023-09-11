@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+export const prerender=false
+
+const birthday = new Date('2001-09-28')
+const today = new Date()
+let age = today.getFullYear() - birthday.getFullYear()
+const month = today.getMonth() - birthday.getMonth()
+if (month < 0 || (month === 0 && today.getDate() < birthday.getDate())) {
+    age--
+}
+---
+<Layout title="About Me">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-10 text-white">
+        <!-- Acerca de mí Card -->
+        <div class="p-8 bg-gray-700 rounded-lg">
+            <h1 class="text-3xl mb-4">Acerca de mí</h1>
+            <p>Hola, mi nombre es Giovanni Salinas y soy estudiante de Ingeniería en Informática.</p>
+            <p>Tengo {age} años y me gusta escuchar música y aprender sobre ciberseguridad.</p>
+        </div>
+
+        <!-- Educación y Experiencia Card -->
+        <div class="p-8 bg-gray-700 rounded-lg">
+            <h2 class="text-2xl mb-4">Educación y Experiencia Académica</h2>
+            <ul>
+                <li>Participé en dos ferias de telecomunicaciones, donde pude aplicar mis conocimientos en el campo</li>
+                <li>He asistido a múltiples conferencias organizadas por la academia de Cisco, lo que me ha dado una comprensión profunda de las redes y las tecnologías de comunicación.</li>
+                <li>Obtuve el tercer lugar en una olimpiada de robótica a nivel nacional organizada por AIEP en 2018. Este logro refleja mis habilidades en programación y mecatrónica.</li>
+                <li>Completé un ciclo de liderazgo ofrecido por el instituto república del 1 al 3 de diciembre de 2021. Esto ha fortalecido mis habilidades de liderazgo y mi capacidad para trabajar eficazmente en equipo.</li>
+            </ul>
+
+        </div>
+
+        <!-- Competencias Personales Card -->
+        <div class="p-8 bg-gray-700 rounded-lg">
+            <h2 class="text-2xl mb-4">Competencias Personales</h2>
+            <p>Entusiasta y comprometido en todas las labores que emprendo, siempre buscando aportar nuevas ideas para el mejor funcionamiento de cualquier proyecto en el que participe. Tengo fuertes habilidades comunicacionales y organizativas que me permiten trabajar bien en equipo. Ofrezco calidez y empatía en todo lo que hago.</p>
+        </div>
+
+        <!-- Intereses y Metas Card -->
+        <div class="p-8 bg-gray-700 rounded-lg">
+            <h2 class="text-2xl mb-4">Intereses y Metas Futuras</h2>
+            <p>Además de la programación, la ciberseguridad es otro campo que me apasiona y en el que busco desarrollarme más en el futuro. Espero poder contribuir a proyectos que tengan un impacto social positivo y estoy abierto a colaboraciones y nuevas oportunidades de aprendizaje.</p>
+        </div>
+
+        <!-- Insignias Card -->
+        <div class="col-span-full p-8 bg-gray-700 rounded-lg">
+            <h2 class="text-2xl mb-4 text-center">Algunas de mis insignias:</h2>
+            <div class="flex items-center justify-center pb-5 pt-5 space-x-6">
+                <div  data-iframe-width='250' data-iframe-height='240' data-share-badge-id='9a3f0f99-23ff-4da0-8456-dd8d2c8e09cf' data-share-badge-host='https://www.credly.com' /><script type='text/javascript' async src='//cdn.credly.com/assets/utilities/embed.js' />
+                <div data-iframe-width='250' data-iframe-height='240' data-share-badge-id='d93dbb3a-f663-4d20-b589-51579ec2bfce' data-share-badge-host='https://www.credly.com' /><script type='text/javascript' async src='//cdn.credly.com/assets/utilities/embed.js' />
+            </div>
+        </div>
+    </div>
+</Layout>
+

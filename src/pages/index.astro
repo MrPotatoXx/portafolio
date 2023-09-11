@@ -1,19 +1,50 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Header from '../components/Header.astro';
-import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Portafolio">
-	<Header />
-	<main class="flex-growmb-auto">
-			<div class="flex justify-center">
-				<div class="">
-					<h1 class="text-center text-white text-3xl mb-4">Bienvenidos al portafolio del PotatoXx</h1>
-					<p class="text-center text-white">Aquí encontrarás algunos de mis proyectos</p>
-				</div>
+	<div class="flex justify-center">
+		<div>
+			<h1 class="text-center text-white text-3xl mb-4">Bienvenidos al portafolio de PotatoXx</h1>
+			<p class="text-center text-white mb-4">Gracias por visitar mi portafolio. Aquí, te presento una variedad de proyectos que reflejan mi experiencia y habilidades en el desarrollo. Si ves algo que te llama la atención y quieres colaborar, no dudes en contactarme.</p>
+
+			<p class="text-center text-white mb-4">Desde aplicaciones web hasta análisis de datos, aquí encontrarás un abanico de mis habilidades técnicas.</p>
+
+			<div class="w-auto">
+				<p class="text-center text-white mb-4 mt-10">Algunos de los lenguajes en los que he trabajado</p>
+				<ul role="list" class="link-card-grid">
+					<Card
+						href="/proyects"
+						title="Python"
+						body="Desarrollo de scripts."
+					/>
+					<Card
+						href="/proyects"
+						title="Java"
+						body="Aplicaciones empresariales."
+					/>
+					<Card
+						href="/proyects"
+						title="JavaScript"
+						body="Desarrollo front-end."
+					/>
+					<Card
+						href="/proyects"
+						title="SQL"
+						body="Gestión de bases de datos."
+					/>
+				</ul>
 			</div>
-	</main>
-	<Footer />
+		</div>
+	</div>
 </Layout>
+
+<style>
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

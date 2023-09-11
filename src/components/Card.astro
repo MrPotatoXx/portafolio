@@ -1,8 +1,9 @@
 ---
+import {imageType} from "astro/dist/assets/vendor/image-size/types";
 interface Props {
-	title: string;
-	body: string;
 	href: string;
+	title: string;
+	body: null;
 }
 
 const { href, title, body } = Astro.props;
