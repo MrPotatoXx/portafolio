@@ -6,7 +6,7 @@ Bienvenido a mi portafolio web, construido con el maravilloso framework [Astro](
 
 ## 🌐 Live Demo
 
-Visita mi portafolio en vivo en: [potatox.me](#)
+Visita mi portafolio en vivo en: [potatox.me](https://potatox.me/)
 
 ## 🛠️ Características
 
