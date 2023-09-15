@@ -1,5 +1,4 @@
 ---
-import {imageType} from "astro/dist/assets/vendor/image-size/types";
 interface Props {
 	href: string;
 	title: string;
@@ -8,20 +7,21 @@ interface Props {
 
 const { href, title, body } = Astro.props;
 ---
-
-<li class="link-card">
-	<a href={href}>
-		<h2>
+<li class="link-card rounded-lg transition-all shadow-inner">
+	<a href={href} class="w-full no-underline leading-snug p-3 rounded-lg text-white bg-gray-700 opacity-80">
+		<h2 class="m-0 text-xl transition-all">
 			{title}
 			<span>&rarr;</span>
 		</h2>
-		<p>
+		<p class="mt-2 mb-0">
 			{body}
 		</p>
 	</a>
 </li>
+
 <style>
 	.link-card {
+		@apply list-none flex p-1 rounded-lg transition-all shadow-inner;
 		list-style: none;
 		display: flex;
 		padding: 1px;
