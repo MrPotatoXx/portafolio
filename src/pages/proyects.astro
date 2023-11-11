@@ -1,9 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from '../components/ProjectCard.astro';
+const currentPage = "proyects";
 ---
 
-<Layout title="Proyectos">
+<Layout title="Proyectos" currentPage={currentPage}>
     <div class="flex flex-wrap justify-center"> <!-- Justify-center para centrar las tarjetas -->
         <div class="p-4 w-full md:w-1/2 lg:w-1/4 flex"> <!-- envolver en un div flex para centrar verticalmente -->
             <ProjectCard

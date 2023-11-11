@@ -9,8 +9,9 @@ const month = today.getMonth() - birthday.getMonth();
 if (month < 0 || (month === 0 && today.getDate() < birthday.getDate())) {
     age--;
 }
+const currentPage = 'about';
 ---
-<Layout title="About Me">
+<Layout title="About Me" currentPage={currentPage}>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-10 text-white">
         <!-- Acerca de mí Card -->
         <div class="p-4 md:p-8 bg-gray-700 rounded-lg">
