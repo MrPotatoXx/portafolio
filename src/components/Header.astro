@@ -35,4 +35,8 @@ const { currentPage } = Astro.props;
     .inactive-link::after {
         content: '>';
     }
+    div > a.active-link::before,
+    div > a.active-link::after{
+        font-size: 20px;
+    }
 </style>
