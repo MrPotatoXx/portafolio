@@ -82,9 +82,9 @@ layout: '../../layouts/Layout.astro'
 
 | Curso                                    | Código | Calificación |
 |------------------------------------------|--------|--------------|
-| Gestión de Personas para la Comunicación | GEPC01 | -            |
-| Planificación Estratégica                | TIDC29 | -            |
-| Ética y Legislación                      | TIDC31 | -            |
-| Taller de Investigación Operativa        | TIEA08 | -            |
-| Inteligencia de Negocios                 | TIEA10 | -            |
-| Seminario de Grado                       | TIHI12 | -            |
+| Gestión de Personas para la Comunicación | GEPC01 | 5.6          |
+| Planificación Estratégica                | TIDC29 | 6.2          |
+| Ética y Legislación                      | TIDC31 | 5.8          |
+| Taller de Investigación Operativa        | TIEA08 | 6.2          |
+| Inteligencia de Negocios                 | TIEA10 | 6.7          |
+| Seminario de Grado                       | TIHI12 | 5.9          |
