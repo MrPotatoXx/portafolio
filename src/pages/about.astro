@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CardInsignia from '../components/CardInsignia.astro';
+
 export const prerender = false;
 
 const birthday = new Date('2001-09-28');
@@ -11,6 +13,7 @@ if (month < 0 || (month === 0 && today.getDate() < birthday.getDate())) {
 }
 const currentPage = 'about';
 ---
+
 <Layout title="About Me" currentPage={currentPage}>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-10 text-white">
         <!-- Acerca de mí Card -->
@@ -46,21 +49,14 @@ const currentPage = 'about';
         <!-- Insignias Card -->
         <div class="col-span-full p-4 md:p-8 bg-gray-700 rounded-lg">
             <h2 class="text-xl md:text-2xl mb-4 text-center">Algunas de mis insignias:</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
-                <div data-iframe-width='250' data-iframe-height='240' data-share-badge-id='9a3f0f99-23ff-4da0-8456-dd8d2c8e09cf' data-share-badge-host='https://www.credly.com'>
-                    <script type='text/javascript' async src='//cdn.credly.com/assets/utilities/embed.js' />
-                </div>
-                <div data-iframe-width='250' data-iframe-height='240' data-share-badge-id='d93dbb3a-f663-4d20-b589-51579ec2bfce' data-share-badge-host='https://www.credly.com'>
-                    <script type='text/javascript' async src='//cdn.credly.com/assets/utilities/embed.js' />
-                </div>
-                <div data-iframe-width="250" data-iframe-height="240" data-share-badge-id="76a09637-9bce-4990-a323-62c67f673579" data-share-badge-host="https://www.credly.com">
-                    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"/>
-                </div>
-                <div data-iframe-width="250" data-iframe-height="240" data-share-badge-id="0c8c69cf-e8ed-4689-8736-789ef92d3596" data-share-badge-host="https://www.credly.com">
-                    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"/>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 items-center justify-center">
+
+                <CardInsignia title="Introduction to Cybersecurity" badgeId="9a3f0f99-23ff-4da0-8456-dd8d2c8e09cf" />
+                <CardInsignia title="Cybersecurity Essentials" badgeId="d93dbb3a-f663-4d20-b589-51579ec2bfce" />
+                <CardInsignia title="Python Essentials 2" badgeId="76a09637-9bce-4990-a323-62c67f673579" />
+                <CardInsignia title="Ethical Hacker" badgeId="0c8c69cf-e8ed-4689-8736-789ef92d3596" />
+
             </div>
         </div>
     </div>
 </Layout>
-
