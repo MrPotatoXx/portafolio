@@ -27,8 +27,8 @@ jobs:
       uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.SERVER_HOST }}
-		username: ${{ secrets.SERVER_USER }}
-		password: ${{ secrets.SERVER_PASSWORD }}
-		port: ${{ secrets.SERVER_PORT }}
-		source: "dist/*"
-		target: ${{ secrets.SERVER_TARGET_PATH }}
+        username: ${{ secrets.SERVER_USER }}
+        password: ${{ secrets.SERVER_PASSWORD }}
+        port: ${{ secrets.SERVER_PORT }}
+        source: "dist/*"
+        target: "/srv/www/html/"
