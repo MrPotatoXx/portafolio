@@ -2,7 +2,6 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
-import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 
 interface Props {
 	title: string;
@@ -25,10 +24,18 @@ const { title, currentPage } = Astro.props;
 		<meta property="og:title" content={title}>
 		<meta property="og:description" content="Portafolio de Giovanni Salinas, Ingeniero en Informática.">
 		<meta property="og:type" content="website">
-		<GoogleAnalytics trackingId="G-3K6PX2FWFDO" />
 		<ViewTransitions />
 		<title>{title}</title>
 	</head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3K6PX2FWFD"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-3K6PX2FWFD');
+	</script>
 	<body class="flex flex-col min-h-screen justify-between">
 		<Header currentPage={currentPage}/>
 		<main class="justify-items-center">
