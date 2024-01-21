@@ -1,0 +1,24 @@
+---
+export let trackingId: string;
+---
+
+<script>
+	if (typeof window !== 'undefined') {
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag() {
+	    dataLayer.push(arguments);
+	  }
+	  gtag('js', new Date());
+	  gtag('config', trackingId);
+
+	  // Load the gtag script asynchronously
+	  const script = document.createElement('script');
+	  script.async = true;
+	  script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+	  script.onload = () => {
+	    gtag('js', new Date());
+	    gtag('config', trackingId);
+	  };
+	  document.head.appendChild(script);
+	}
+</script>

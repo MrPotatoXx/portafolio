@@ -2,6 +2,8 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+
 interface Props {
 	title: string;
 	currentPage: string;
@@ -11,18 +13,25 @@ const { title, currentPage } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Portafolio del Potatox" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="keywords" content="Giovanni Salinas, Ingeniería en Informática, ciberseguridad, desarrollo web, programación, Python, Ethical Hacker">
+		<meta name="author" content="Giovanni Salinas">
+		<meta http-equiv="content-language" content="es">
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content="Portafolio de Giovanni Salinas, Ingeniero en Informática.">
+		<meta property="og:type" content="website">
+		<GoogleAnalytics trackingId="G-3K6PX2FWFDO" />
 		<ViewTransitions />
 		<title>{title}</title>
 	</head>
 	<body class="flex flex-col min-h-screen justify-between">
 		<Header currentPage={currentPage}/>
-		<main class="flex-growmb-auto justify-items-center">
+		<main class="justify-items-center">
 			<slot />
 		</main>
 		<Footer />
