@@ -13,39 +13,36 @@ const { title, currentPage } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Portafolio del Potatox" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<meta name="keywords" content="Giovanni Salinas, Ingeniería en Informática, ciberseguridad, desarrollo web, programación, Python, Ethical Hacker">
-		<meta name="author" content="Giovanni Salinas">
-		<meta http-equiv="content-language" content="es">
-		<meta property="og:title" content={title}>
-		<meta property="og:description" content="Portafolio de Giovanni Salinas, Ingeniero en Informática.">
-		<meta property="og:type" content="website">
-		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
-		<meta name="google-adsense-account" content="ca-pub-2205225349699006">
-		<ViewTransitions />
-		<title>{title}</title>
-	</head>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3K6PX2FWFD"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Portafolio del Potatox" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="keywords" content="Giovanni Salinas, Ingeniería en Informática, ciberseguridad, desarrollo web, programación, Python, Ethical Hacker">
+    <meta name="author" content="Giovanni Salinas">
+    <meta http-equiv="content-language" content="es">
+    <meta property="og:title" content="{title}">
+    <meta property="og:description" content="Portafolio de Giovanni Salinas, Ingeniero en Informática.">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <title>{title}</title>
 
-	gtag('config', 'G-3K6PX2FWFD');
-	</script>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2205225349699006"
-	crossorigin="anonymous"></script>
-	<body class="flex flex-col min-h-screen justify-between">
-		<Header currentPage={currentPage}/>
-		<main class="justify-items-center">
-			<slot />
-		</main>
-		<Footer />
-	</body>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2205225349699006" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K6PX2FWFD"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3K6PX2FWFD');
+    </script>
+</head>
+<body class="flex flex-col min-h-screen justify-between">
+    <Header currentPage={currentPage}/>
+    <main class="justify-items-center">
+        <slot />
+    </main>
+    <Footer />
+</body>
 </html>
 <style is:global>
 	:root {
