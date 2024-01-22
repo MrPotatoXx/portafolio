@@ -21,12 +21,12 @@ Visita mi portafolio en vivo en: [potatox.me](https://potatox.me/)
 ### Clona el repositorio
 
 ```bash
-git clone https://github.com/tu-username/tu-portafolio.git
+git clone https://github.com/MrPotatoXx/portafolio.git
 ```
 ### Entra en la carpeta del proyecto
 
 ```bash
-cd tu-portafolio
+cd portafolio
 ```
 ### Instala las dependencias
 
