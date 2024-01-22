@@ -5,56 +5,58 @@ const currentPage = 'home';
 ---
 
 <Layout title="Portafolio" currentPage={currentPage}>
-	<div class="flex justify-center px-4 lg:px-0">
-		<div class="max-w-screen-lg">
-			<h1 class="text-center text-white text-3xl mb-4 sm:text-4xl">Bienvenidos al portafolio de PotatoXx</h1>
-			<p class="text-center text-white mb-4 sm:text-lg">Gracias por visitar mi portafolio. Aquí, te presento una variedad de proyectos que reflejan mi experiencia y habilidades en el desarrollo. Si ves algo que te llama la atención y quieres colaborar, no dudes en contactarme.</p>
+    <div class="flex justify-center">
+        <div class="max-w-screen-lg">
+            <h1 class="text-center text-white text-3xl mb-4 sm:text-4xl">Bienvenidos al portafolio de PotatoXx</h1>
+            <p class="text-center text-white mb-4 sm:text-lg">Gracias por visitar mi portafolio. Aquí, te presento una variedad de proyectos que reflejan mi experiencia y habilidades en el desarrollo. Si ves algo que te llama la atención y quieres colaborar, no dudes en contactarme.</p>
+            <p class="text-center text-white mb-4 sm:text-lg">Desde aplicaciones web hasta análisis de datos, aquí encontrarás un abanico de mis habilidades técnicas.</p>
 
-			<p class="text-center text-white mb-4 sm:text-lg">Desde aplicaciones web hasta análisis de datos, aquí encontrarás un abanico de mis habilidades técnicas.</p>
+            <div class="w-auto mb-8">
+                <p class="text-center text-white mb-4 mt-10 sm:text-lg">Algunos de los lenguajes en los que he trabajado</p>
+                <ul role="list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <Card
+                        href="/proyects"
+                        title="Python"
+                        body="Desarrollo de scripts."
+                    />
+                    <Card
+                        href="/proyects"
+                        title="Java"
+                        body="Aplicaciones empresariales."
+                    />
+                    <Card
+                        href="/proyects"
+                        title="JavaScript"
+                        body="Desarrollo front-end."
+                    />
+                    <Card
+                        href="/proyects"
+                        title="SQL"
+                        body="Gestión de bases de datos."
+                    />
+                </ul>
+            </div>
 
-			<div class="w-auto">
-				<p class="text-center text-white mb-4 mt-10 sm:text-lg">Algunos de los lenguajes en los que he trabajado</p>
-				<ul role="list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-					<Card
-						href="/proyects"
-						title="Python"
-						body="Desarrollo de scripts."
-					/>
-					<Card
-						href="/proyects"
-						title="Java"
-						body="Aplicaciones empresariales."
-					/>
-					<Card
-						href="/proyects"
-						title="JavaScript"
-						body="Desarrollo front-end."
-					/>
-					<Card
-						href="/proyects"
-						title="SQL"
-						body="Gestión de bases de datos."
-					/>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2205225349699006" crossorigin="anonymous"></script>
-	<!-- bloque de anuncio -->
-	<ins class="adsbygoogle"
-		style="display:block"
-		data-ad-client="ca-pub-2205225349699006"
-		data-ad-slot="9356836992"
-		data-ad-format="auto"
-		data-full-width-responsive="true"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <!-- Contenedor del bloque de anuncio con Tailwind CSS -->
+            <div class="flex justify-center mb-8">
+                <div class="ad-container">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2205225349699006" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-2205225349699006"
+                        data-ad-slot="9356836992"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+            </div>
+        </div>
+    </div>
 </Layout>
 
 <style>
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+    .ad-container {
+        max-width: 728px;
+        margin: 0 auto;
+    }
 </style>
