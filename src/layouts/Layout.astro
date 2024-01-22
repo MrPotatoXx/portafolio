@@ -24,6 +24,7 @@ const { title, currentPage } = Astro.props;
 		<meta property="og:title" content={title}>
 		<meta property="og:description" content="Portafolio de Giovanni Salinas, Ingeniero en Informática.">
 		<meta property="og:type" content="website">
+		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
 		<ViewTransitions />
 		<title>{title}</title>
 	</head>
@@ -57,7 +58,7 @@ const { title, currentPage } = Astro.props;
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: 'Source Code Pro', monospace;
 		background: #0c0c0ce6;
 		background-size: 224px;
 		color-scheme: dark light;
