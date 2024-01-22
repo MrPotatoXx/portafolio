@@ -32,5 +32,3 @@ jobs:
         port: ${{ secrets.SERVER_PORT }}
         source: "dist/"
         target: "/srv/www/html/"
-      env:
-        WORKDIR: dist
