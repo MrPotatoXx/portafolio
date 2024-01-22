@@ -32,3 +32,4 @@ jobs:
         port: ${{ secrets.SERVER_PORT }}
         source: "dist/*"
         target: "/srv/www/html/"
+        strip_components: 1
