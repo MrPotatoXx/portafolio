@@ -28,7 +28,6 @@ const { title, currentPage } = Astro.props;
 		<ViewTransitions />
 		<title>{title}</title>
 	</head>
-	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3K6PX2FWFD"></script>
 	<script>
 	window.dataLayer = window.dataLayer || [];
@@ -37,6 +36,8 @@ const { title, currentPage } = Astro.props;
 
 	gtag('config', 'G-3K6PX2FWFD');
 	</script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2205225349699006"
+	crossorigin="anonymous"></script>
 	<body class="flex flex-col min-h-screen justify-between">
 		<Header currentPage={currentPage}/>
 		<main class="justify-items-center">
