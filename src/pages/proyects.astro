@@ -6,7 +6,7 @@ const currentPage = "proyects";
 
 <Layout title="Proyectos" currentPage={currentPage}>
     <div class="flex flex-wrap justify-center"> <!-- Justify-center para centrar las tarjetas -->
-        <div class="p-4 w-full md:w-1/2 lg:w-1/4 flex"> <!-- envolver en un div flex para centrar verticalmente -->
+        <div class="p-4 w-full md:w-1/2 lg:w-1/3 flex"> <!-- envolver en un div flex para centrar verticalmente -->
             <ProjectCard
                     title="Year Progress Bar"
                     description="Este proyecto genera una barra de tiempo transcurrido (en minutos) en el año."
@@ -14,7 +14,7 @@ const currentPage = "proyects";
                     imageUrl="/images/progress_bar_year.png"
             />
         </div>
-        <div class="p-4 w-full md:w-1/2 lg:w-1/4 flex"> <!-- envolver en un div flex para centrar verticalmente -->
+        <div class="p-4 w-full md:w-1/2 lg:w-1/3 flex"> <!-- envolver en un div flex para centrar verticalmente -->
             <ProjectCard
                     title="Video/Music Downloader"
                     description="Este proyecto te permite descargar audios o vídeos de YouTube en su mejor calidad."
@@ -22,7 +22,7 @@ const currentPage = "proyects";
                     imageUrl="/images/music.png"
             />
         </div>
-        <div class="p-4 w-full md:w-1/2 lg:w-1/4 flex"> <!-- envolver en un div flex para centrar verticalmente -->
+        <div class="p-4 w-full md:w-1/2 lg:w-1/3 flex"> <!-- envolver en un div flex para centrar verticalmente -->
             <ProjectCard
                     title="Portafolio en astro"
                     description="Este proyecto es mi portafolio personal, hecho con Astro y TailwindCSS."
@@ -30,5 +30,47 @@ const currentPage = "proyects";
                     imageUrl="/images/portafolio.png"
             />
         </div>
+        <!-- Proyecto Seminario de Grado: TrackTrainer API -->
+        <div class="p-4 w-full md:w-1/2 lg:w-1/3 flex">
+            <ProjectCard
+                    title="TrackTrainer API - Seminario de Grado"
+                    description="Parte de mi seminario de grado, esta API en Spring Boot gestiona la lógica de negocio para el proyecto TrackTrainer, facilitando el registro y seguimiento de ejercicios."
+                    link="https://github.com/Dev-Riders/TrackTrainerAPI"
+                    imageUrl="/images/tracktrainer-api.png"
+            />
+        </div>
+
+        <!-- Proyecto Seminario de Grado: TrackTrainer App Móvil -->
+        <div class="p-4 w-full md:w-1/2 lg:w-1/3 flex">
+            <ProjectCard
+                    title="TrackTrainer App Móvil - Seminario de Grado"
+                    description="Desarrollada como parte de mi seminario de grado, esta app móvil en Java permite a los usuarios de TrackTrainer registrar y monitorear sus ejercicios."
+                    link="https://github.com/Dev-Riders/TrackTrainerAPP"
+                    imageUrl="/images/tracktrainer-app.png"
+            />
+        </div>
+
+        <!-- Proyecto Seminario de Grado: TrackTrainer Portal Administrativo -->
+        <div class="p-4 w-full md:w-1/2 lg:w-1/3 flex">
+            <ProjectCard
+                    title="TrackTrainer Portal Administrativo - Seminario de Grado"
+                    description="Como parte esencial de mi seminario de grado, este portal web ofrece una interfaz administrativa para gestionar la aplicación TrackTrainer."
+                    link="https://github.com/Dev-Riders/TrackTrainerWeb"
+                    imageUrl="/images/tracktrainer-web.png"
+            />
+        </div>
+
+
+        <!--Template cards -->
+        <!--
+        <div class="p-4 w-full md:w-1/2 lg:w-1/3 flex">
+            <ProjectCard
+                    title=""
+                    description=""
+                    link=""
+                    imageUrl=""
+            />
+        </div>
+        -->
     </div>
 </Layout>
