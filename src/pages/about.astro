@@ -15,47 +15,45 @@ const currentPage = 'about';
 ---
 
 <Layout title="About Me" currentPage={currentPage}>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-10 text-white">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 md:p-10 text-white">
         <!-- Acerca de mí Card -->
-        <div class="p-4 md:p-8 bg-gray-700 rounded-lg">
+        <div class="col-span-1 lg:col-span-2 p-4 md:p-8 bg-gray-800 hover:bg-gradient-to-r from-purple-600 via-indigo-800 to-gray-800 rounded-lg transition-all duration-500 ease-in-out">
             <h1 class="text-2xl md:text-3xl mb-4">Acerca de mí</h1>
             <p>Hola, mi nombre es Giovanni Salinas y soy estudiante de Ingeniería en Informática.</p>
             <p>Tengo {age} años y me gusta escuchar música y aprender sobre ciberseguridad.</p>
         </div>
 
-        <!-- Educación y Experiencia Card -->
-        <div class="p-4 md:p-8 bg-gray-700 rounded-lg">
+        <!-- Competencias Personales Card -->
+        <div class="col-span-1 p-4 md:p-8 bg-gray-800 hover:bg-gradient-to-r from-purple-600 via-indigo-800 to-gray-800 rounded-lg transition-all duration-500 ease-in-out">
+            <h2 class="text-xl md:text-2xl mb-4">Competencias Personales</h2>
+            <p>Entusiasta y comprometido en todas las labores que emprendo, siempre buscando aportar nuevas ideas para el mejor funcionamiento de cualquier proyecto en el que participe.</p>
+        </div>
+
+        <!-- Intereses y Metas Card -->
+        <div class="col-span-1 sm:col-span-2 lg:col-span-1 p-4 md:p-8 bg-gray-800 hover:bg-gradient-to-r from-purple-600 via-indigo-800 to-gray-800 rounded-lg transition-all duration-500 ease-in-out">
+            <h2 class="text-xl md:text-2xl mb-4">Intereses y Metas Futuras</h2>
+            <p>Además de la programación, la ciberseguridad es otro campo que me apasiona y en el que busco desarrollarme más en el futuro.</p>
+        </div>
+
+        <!-- Educación y Experiencia Académica Card -->
+        <div class="col-span-1 lg:col-span-2 p-4 md:p-8 bg-gray-800 hover:bg-gradient-to-r from-purple-600 via-indigo-800 to-gray-800 rounded-lg transition-all duration-500 ease-in-out">
             <h2 class="text-xl md:text-2xl mb-4">Educación y Experiencia Académica</h2>
             <ul class="list-none">
-                <li>Participé en dos ferias de telecomunicaciones, donde pude aplicar mis conocimientos en el campo</li>
+                <li>Participé en dos ferias de telecomunicaciones, donde pude aplicar mis conocimientos en el campo.</li>
                 <li>He asistido a múltiples conferencias organizadas por la academia de Cisco, lo que me ha dado una comprensión profunda de las redes y las tecnologías de comunicación.</li>
                 <li>Obtuve el tercer lugar en una olimpiada de robótica a nivel nacional organizada por AIEP en 2018. Este logro refleja mis habilidades en programación y mecatrónica.</li>
                 <li>Completé un ciclo de liderazgo ofrecido por el instituto república del 1 al 3 de diciembre de 2021. Esto ha fortalecido mis habilidades de liderazgo y mi capacidad para trabajar eficazmente en equipo.</li>
             </ul>
         </div>
 
-        <!-- Competencias Personales Card -->
-        <div class="p-4 md:p-8 bg-gray-700 rounded-lg">
-            <h2 class="text-xl md:text-2xl mb-4">Competencias Personales</h2>
-            <p>Entusiasta y comprometido en todas las labores que emprendo, siempre buscando aportar nuevas ideas para el mejor funcionamiento de cualquier proyecto en el que participe.</p>
-        </div>
-
-        <!-- Intereses y Metas Card -->
-        <div class="p-4 md:p-8 bg-gray-700 rounded-lg">
-            <h2 class="text-xl md:text-2xl mb-4">Intereses y Metas Futuras</h2>
-            <p>Además de la programación, la ciberseguridad es otro campo que me apasiona y en el que busco desarrollarme más en el futuro.</p>
-        </div>
-
         <!-- Insignias Card -->
-        <div class="col-span-full p-4 md:p-8 bg-gray-700 rounded-lg">
+        <div class="col-span-full p-4 md:p-8 bg-gray-800 hover:bg-gradient-to-r from-purple-600 via-indigo-800 to-gray-800 rounded-lg transition-all duration-500 ease-in-out">
             <h2 class="text-xl md:text-2xl mb-4 text-center">Algunas de mis insignias:</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 items-center justify-center">
-
                 <CardInsignia title="Introduction to Cybersecurity" badgeId="9a3f0f99-23ff-4da0-8456-dd8d2c8e09cf" />
                 <CardInsignia title="Cybersecurity Essentials" badgeId="d93dbb3a-f663-4d20-b589-51579ec2bfce" />
                 <CardInsignia title="Python Essentials 2" badgeId="76a09637-9bce-4990-a323-62c67f673579" />
                 <CardInsignia title="Ethical Hacker" badgeId="0c8c69cf-e8ed-4689-8736-789ef92d3596" />
-
             </div>
         </div>
     </div>
