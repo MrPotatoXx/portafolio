@@ -12,6 +12,7 @@ if (month < 0 || (month === 0 && today.getDate() < birthday.getDate())) {
     age--;
 }
 const currentPage = 'about';
+const cvLink = "cv"; // Reemplaza esto con el enlace a tu CV en línea
 ---
 
 <Layout title="About Me" currentPage={currentPage}>
@@ -20,6 +21,10 @@ const currentPage = 'about';
         <div class="col-span-1 lg:col-span-2 p-4 md:p-8 bg-gray-800 hover:bg-gradient-to-r from-purple-600 via-indigo-800 to-gray-800 rounded-lg transition-all duration-500 ease-in-out">
             <h1 class="text-2xl md:text-3xl mb-4">Acerca de mí</h1>
             <p>Hola, mi nombre es Giovanni Salinas y soy estudiante de Ingeniería en Informática. Tengo {age} años y me gusta escuchar música y aprender sobre ciberseguridad.</p>
+            <!-- Enlace para ver el CV -->
+            <a href={cvLink} class="inline-block bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4" target="_blank" rel="noopener noreferrer">
+                Ver mi CV
+            </a>
         </div>
 
         <!-- Competencias Personales Card -->
