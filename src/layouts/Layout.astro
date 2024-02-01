@@ -62,4 +62,20 @@ const { title, currentPage } = Astro.props;
 		background-size: 224px;
 		color-scheme: dark light;
 	}
+
+    @media print {
+    .no-print {
+      display: none !important;
+    }
+  }
+
+  .print {
+    display: none !important;
+  }
+
+  @media print {
+    .print {
+      display: block !important;
+    }
+  }
 </style>

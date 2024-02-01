@@ -1,0 +1,13 @@
+---
+import Section from "@/components/Section.astro"
+import { basics } from "@cv"
+const { summary } = basics
+---
+
+<Section title="About">
+  <div class="max-w-4xl mx-auto">
+    <p class="text-base md:text-lg text-gray-700 leading-relaxed my-4">
+      {summary}
+    </p>
+  </div>
+</Section>
