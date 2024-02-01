@@ -12,12 +12,12 @@ import { projects } from "@cv"
             <article class="flex flex-col h-full">
               <header class="flex-grow">
                 <h3 class="mb-2 text-xl font-semibold">
-                  <a href={url} title={`Ver el proyecto ${name}`} class="text-gray-900 hover:underline">
+                  <a href={url} title={`Ver el proyecto ${name}`} class="text-gray-200 hover:underline">
                     {name}
                   </a>
                   {isActive && <span class="text-green-500">•</span>}
                 </h3>
-                <p class="text-base text-gray-600 mb-2">{description}</p>
+                <p class="text-base text-gray-300 mb-2">{description}</p>
               </header>
               <footer class="flex flex-wrap gap-2 text-sm justify-center pt-4">
                 {highlights.map((highlight) => (
