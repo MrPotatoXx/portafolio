@@ -25,9 +25,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
 });
 ---
 
-<footer
-  class="no-print bg-black w-full py-2 text-center text-sm mt-4"
->
+<footer class="no-print bg-black w-full py-2 text-center text-sm mt-4">
   Pulsa <kbd class="bg-gray-800 rounded px-2 font-mono text-xs">Cmd o Ctrl</kbd>
   + <kbd class="bg-gray-800 rounded px-2 font-mono text-xs">K</kbd> para abrir la
   paleta de comandos.
@@ -68,7 +66,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
             window.open(url, "_blank");
           },
         };
-      }
+      },
     );
 
     ninja.data = [

@@ -2,70 +2,92 @@
 import Layout from "@/layouts/Layout.astro";
 
 const resources = [
-    '1.jpg',
-    '2.jpg',
-    '3.jpg',
-    '4.jpg',
-    'FaviconMonoA.ico',
-    'Potato.7z',
-    'valo1.mp4',
-    'valo2.mp4',
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "FaviconMonoA.ico",
+  "Potato.7z",
+  "valo1.mp4",
+  "valo2.mp4",
 ];
 
-const images = resources.filter(resource => resource.endsWith('.jpg') || resource.endsWith('.png') || resource.endsWith('.ico'));
-const videos = resources.filter(resource => resource.endsWith('.mp4'));
-const others = resources.filter(resource => !images.includes(resource) && !videos.includes(resource));
-
+const images = resources.filter(
+  (resource) =>
+    resource.endsWith(".jpg") ||
+    resource.endsWith(".png") ||
+    resource.endsWith(".ico"),
+);
+const videos = resources.filter((resource) => resource.endsWith(".mp4"));
+const others = resources.filter(
+  (resource) => !images.includes(resource) && !videos.includes(resource),
+);
 ---
 
 <Layout title="Recursos" currentPage="resources">
-    <div class="text-center p-10">
-        <h1 class="text-3xl mb-6">Recursos</h1>
+  <div class="text-center p-10">
+    <h1 class="text-3xl mb-6">Recursos</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Imágenes -->
+      <div class="bg-gray-700 rounded-lg shadow-lg p-5">
+        <h2 class="text-2xl mb-4 text-white">Imágenes</h2>
+        <ul>
+          {
+            images.map((image) => (
+              <li class="mb-2">
+                <a
+                  href={`/resources/${image}`}
+                  target="_blank"
+                  class="text-blue-400 hover:text-blue-500"
+                >
+                  {image.split(".")[0]}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
 
-            <!-- Imágenes -->
-            <div class="bg-gray-700 rounded-lg shadow-lg p-5">
-                <h2 class="text-2xl mb-4 text-white">Imágenes</h2>
-                <ul>
-                    {images.map((image) => (
-                            <li class="mb-2">
-                                <a href={`/resources/${image}`} target="_blank" class="text-blue-400 hover:text-blue-500">
-                                    {image.split('.')[0]}
-                                </a>
-                            </li>
-                    ))}
-                </ul>
-            </div>
+      <!-- Vídeos -->
+      <div class="bg-gray-700 rounded-lg shadow-lg p-5">
+        <h2 class="text-2xl mb-4 text-white">Vídeos</h2>
+        <ul>
+          {
+            videos.map((video) => (
+              <li class="mb-2">
+                <a
+                  href={`/resources/${video}`}
+                  target="_blank"
+                  class="text-blue-400 hover:text-blue-500"
+                >
+                  {video.split(".")[0]}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
 
-            <!-- Vídeos -->
-            <div class="bg-gray-700 rounded-lg shadow-lg p-5">
-                <h2 class="text-2xl mb-4 text-white">Vídeos</h2>
-                <ul>
-                    {videos.map((video) => (
-                            <li class="mb-2">
-                                <a href={`/resources/${video}`} target="_blank" class="text-blue-400 hover:text-blue-500">
-                                    {video.split('.')[0]}
-                                </a>
-                            </li>
-                    ))}
-                </ul>
-            </div>
-
-            <!-- Otros -->
-            <div class="bg-gray-700 rounded-lg shadow-lg p-5">
-                <h2 class="text-2xl mb-4 text-white">Otros</h2>
-                <ul>
-                    {others.map((other) => (
-                            <li class="mb-2">
-                                <a href={`/resources/${other}`} target="_blank" class="text-blue-400 hover:text-blue-500">
-                                    {other.split('.')[0]}
-                                </a>
-                            </li>
-                    ))}
-                </ul>
-            </div>
-
-        </div>
+      <!-- Otros -->
+      <div class="bg-gray-700 rounded-lg shadow-lg p-5">
+        <h2 class="text-2xl mb-4 text-white">Otros</h2>
+        <ul>
+          {
+            others.map((other) => (
+              <li class="mb-2">
+                <a
+                  href={`/resources/${other}`}
+                  target="_blank"
+                  class="text-blue-400 hover:text-blue-500"
+                >
+                  {other.split(".")[0]}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
+  </div>
 </Layout>

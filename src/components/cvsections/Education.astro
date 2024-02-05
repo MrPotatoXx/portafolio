@@ -1,6 +1,6 @@
 ---
-import Section from "@/components/Section.astro"
-import { education } from "@cv"
+import Section from "@/components/Section.astro";
+import { education } from "@cv";
 ---
 
 <Section title="Educación">
@@ -8,16 +8,18 @@ import { education } from "@cv"
     <ul class="flex flex-col gap-8">
       {
         education.map(({ institution, startDate, endDate, area, score }) => {
-          const startYear = startDate
-          const endYear = endDate ? endDate : "Actual"
-          const years = `${startYear} - ${endYear}`
+          const startYear = startDate;
+          const endYear = endDate ? endDate : "Actual";
+          const years = `${startYear} - ${endYear}`;
 
           return (
             <li class="border border-gray-200 rounded-lg p-4">
               <article class="space-y-2">
                 <header class="flex justify-between items-center">
                   <div>
-                    <h3 class="font-medium text-lg text-gray-200">{institution}</h3>
+                    <h3 class="font-medium text-lg text-gray-200">
+                      {institution}
+                    </h3>
                     <p class="text-sm text-gray-300">{area}</p>
                   </div>
                   <div class="text-right">
@@ -27,7 +29,7 @@ import { education } from "@cv"
                 </header>
               </article>
             </li>
-          )
+          );
         })
       }
     </ul>

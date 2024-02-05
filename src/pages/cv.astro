@@ -10,18 +10,18 @@ import Projects from "@/components/cvsections/Projects.astro";
 import Skills from "@/components/cvsections/Skills.astro";
 import Courses from "@/components/cvsections/Courses.astro";
 
-import { basics } from "@cv"
-const { name, label } = basics
+import { basics } from "@cv";
+const { name, label } = basics;
 const currentPage = "cv";
 ---
 
 <Layout title={`Portafolio de ${name} - ${label}`} currentPage={currentPage}>
-	<Hero />
-	<About />
-	<Education />
-	<Experience />
-	<Projects />
-	<Skills />
-	<Courses />
-	<KeyboardManager />
+  <Hero />
+  <About />
+  <Education />
+  <Experience />
+  <Projects />
+  <Skills />
+  <Courses />
+  <KeyboardManager />
 </Layout>

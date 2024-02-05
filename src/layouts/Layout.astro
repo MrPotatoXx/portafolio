@@ -4,8 +4,8 @@ import Footer from "@/components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
-	title: string;
-	currentPage: string;
+  title: string;
+  currentPage: string;
 }
 
 const { title, currentPage } = Astro.props;
@@ -13,69 +13,83 @@ const { title, currentPage } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Portafolio del Potatox" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="keywords" content="Giovanni Salinas, Ingeniería en Informática, ciberseguridad, desarrollo web, programación, Python, Ethical Hacker">
-    <meta name="author" content="Giovanni Salinas">
-    <meta http-equiv="content-language" content="es">
-    <meta property="og:title" content="{title}">
-    <meta property="og:description" content="Portafolio de Giovanni Salinas, Ingeniero en Informática.">
-    <meta property="og:type" content="website">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <meta
+      name="keywords"
+      content="Giovanni Salinas, Ingeniería en Informática, ciberseguridad, desarrollo web, programación, Python, Ethical Hacker"
+    />
+    <meta name="author" content="Giovanni Salinas" />
+    <meta http-equiv="content-language" content="es" />
+    <meta property="og:title" content="{title}" />
+    <meta
+      property="og:description"
+      content="Portafolio de Giovanni Salinas, Ingeniero en Informática."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>{title}</title>
     <ViewTransitions />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2205225349699006" crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K6PX2FWFD"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2205225349699006"
+      crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K6PX2FWFD"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-3K6PX2FWFD');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-3K6PX2FWFD");
     </script>
-</head>
-<body class="flex flex-col min-h-screen justify-between">
-    <Header currentPage={currentPage}/>
+  </head>
+  <body class="flex flex-col min-h-screen justify-between">
+    <Header currentPage={currentPage} />
     <main class="justify-items-center">
-        <slot />
+      <slot />
     </main>
     <Footer />
-</body>
-</html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: 'Source Code Pro', monospace;
-		background: #0c0c0ce6;
-		background-size: 224px;
-		color-scheme: dark light;
-	}
+  </body><style is:global>
+    :root {
+      --accent: 136, 58, 234;
+      --accent-light: 224, 204, 250;
+      --accent-dark: 49, 10, 101;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+      );
+    }
+    html {
+      font-family: "Source Code Pro", monospace;
+      background: #0c0c0ce6;
+      background-size: 224px;
+      color-scheme: dark light;
+    }
 
     @media print {
-    .no-print {
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    .print {
       display: none !important;
     }
-  }
 
-  .print {
-    display: none !important;
-  }
-
-  @media print {
-    .print {
-      display: block !important;
+    @media print {
+      .print {
+        display: block !important;
+      }
     }
-  }
-</style>
+  </style>
+</html>
