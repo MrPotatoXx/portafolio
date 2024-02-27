@@ -351,6 +351,16 @@
 			"Desarrollado con Express.js"
 		  ],
 		  "url": "https://github.com/MrPotatoXx/MyEconoTrack"
+		},
+		{
+		  "name": "Chat en Tiempo Real con React, Express, Socket.IO y MariaDB",
+		  "isActive": true,
+		  "description": "Un chat en tiempo real que combina tecnologías modernas para ofrecer una experiencia fluida y eficiente de comunicación. Con el frontend desarrollado en React, el backend en Express, y la utilización de Socket.IO para la comunicación en tiempo real.",
+		  "highlights": [
+			"Comunicación en tiempo real con Socket.IO",
+			"Backend robusto construido en Express y MariaDb"
+		  ],
+		  "url": "https://github.com/MrPotatoXx/chat"
 		}
 	  ]
   }
