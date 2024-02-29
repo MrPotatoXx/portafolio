@@ -7,6 +7,7 @@ interface Props {
   title: string;
   currentPage: string;
 }
+const description = "Portafolio de Giovanni Salinas, Ingeniero en Informática.";
 
 const { title, currentPage } = Astro.props;
 ---
@@ -14,37 +15,53 @@ const { title, currentPage } = Astro.props;
 <!doctype html>
 <html lang="es">
   <head>
+    <title>{title}</title>
+
     <meta charset="UTF-8" />
-    <meta name="description" content="Portafolio del Potatox" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+  
     <meta
       name="keywords"
       content="Giovanni Salinas, Ingeniería en Informática, ciberseguridad, desarrollo web, programación, Python, Ethical Hacker"
     />
     <meta name="author" content="Giovanni Salinas" />
     <meta http-equiv="content-language" content="es" />
-    <meta property="og:title" content="{title}" />
-    <meta
-      property="og:description"
-      content="Portafolio de Giovanni Salinas, Ingeniero en Informática."
-    />
-    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="" />
+		<meta name="twitter:creator" content="" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="" />
+
+    <meta name="og:image" content="" />
+		<meta name="og:title" content={title} />
+		<meta name="og:description" content={description} />
+		<meta name="og:url" content="" />
+		<meta name="og:site_name" content="potatox" />
+		<meta name="og:type" content="website" />
+		<meta name="og:locale" content="es_CL" />
+
+    <meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>{title}</title>
+
     <ViewTransitions />
   </head>
   <!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3K6PX2FWFD"></script>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'G-3K6PX2FWFD');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3K6PX2FWFD');
 	</script>
   <body class="flex flex-col min-h-screen justify-between">
     <Header currentPage={currentPage} />
