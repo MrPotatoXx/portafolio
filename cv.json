@@ -6,7 +6,7 @@
 	  "email": "salinasgiovanni25@gmail.com",
 	  "phone": "+56950717726",
 	  "url": "https://potatox.me",
-	  "summary": "Mi nombre es Giovanni Salinas, Ingeniero en Informática. Paralelamente a mis estudios, me he dedicado al aprendizaje autodidacta en ciberseguridad, explorando diversas metodologías y herramientas para proteger sistemas e información de las amenazas digitales.",
+	  "summary": "Mi nombre es Giovanni Salinas Villa, tengo 22 años y soy Ingeniero en Informática. Paralelamente a mis estudios, me he dedicado al aprendizaje autodidacta en ciberseguridad, explorando diversas metodologías y herramientas para proteger sistemas e información de las amenazas digitales.",
 	  "location": {
 		"address": "",
 		"postalCode": "9020000",
@@ -27,7 +27,7 @@
 	},
 	"work": [{
 	  "name": "TestGroup",
-	  "position": "Analista de TI",
+	  "position": "Analista de TI - Práctica Profesional",
 	  "url": "https://testgroup.cl/",
 	  "startDate": "15-01-2024",
 	  "endDate": "13-03-2024",
@@ -271,10 +271,10 @@
 	  "fluency": "Intermedio"
 	}],
 	"interests": [{
-	  "name": "Wildlife",
+	  "name": "",
 	  "keywords": [
-		"Ferrets",
-		"Unicorns"
+		"",
+		""
 	  ]
 	}],
 	"references": [{
@@ -314,7 +314,7 @@
 		},
 		{
 		  "name": "TrackTrainer API - Seminario de Grado",
-		  "isActive": true,
+		  "isActive": false,
 		  "description": "Parte de mi seminario de grado, esta API en Spring Boot gestiona la lógica de negocio para el proyecto TrackTrainer, facilitando el registro y seguimiento de ejercicios.",
 		  "highlights": [
 			"API para gestión de ejercicios",
@@ -324,7 +324,7 @@
 		},
 		{
 		  "name": "TrackTrainer App Móvil - Seminario de Grado",
-		  "isActive": true,
+		  "isActive": false,
 		  "description": "Desarrollada como parte de mi seminario de grado, esta app móvil en Java permite a los usuarios de TrackTrainer registrar y monitorear sus ejercicios.",
 		  "highlights": [
 			"App móvil para registro de ejercicios",
@@ -334,7 +334,7 @@
 		},
 		{
 		  "name": "TrackTrainer Portal Administrativo - Seminario de Grado",
-		  "isActive": true,
+		  "isActive": false,
 		  "description": "Como parte esencial de mi seminario de grado, este portal web ofrece una interfaz administrativa para gestionar la aplicación TrackTrainer.",
 		  "highlights": [
 			"Portal web administrativo",
@@ -344,7 +344,7 @@
 		},
 		{
 		  "name": "MyEconoTrack - Gestión de Gastos",
-		  "isActive": true,
+		  "isActive": false,
 		  "description": "API en Express.js para gestionar y rastrear gastos personales. Permite a los usuarios llevar un control detallado de sus finanzas personales.",
 		  "highlights": [
 			"API para gestión de gastos",
@@ -354,7 +354,7 @@
 		},
 		{
 		  "name": "Chat en Tiempo Real con React, Express, Socket.IO y MariaDB",
-		  "isActive": true,
+		  "isActive": false,
 		  "description": "Un chat en tiempo real que combina tecnologías modernas para ofrecer una experiencia fluida y eficiente de comunicación. Con el frontend desarrollado en React, el backend en Express, y la utilización de Socket.IO para la comunicación en tiempo real.",
 		  "highlights": [
 			"Comunicación en tiempo real con Socket.IO",
