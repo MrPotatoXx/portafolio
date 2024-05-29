@@ -1,58 +1,27 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Card from "@/components/Card.astro";
+
+import About from "@/components/indexsections/About.astro";
+import Education from "@/components/indexsections/Education.astro";
+import Experience from "@/components/indexsections/Experience.astro";
+import Hero from "@/components/indexsections/Hero.astro";
+import Projects from "@/components/indexsections/Projects.astro";
+import Skills from "@/components/indexsections/Skills.astro";
+import Courses from "@/components/indexsections/Courses.astro";
+
 const currentPage = "home";
 ---
 
 <Layout title="Portafolio" currentPage={currentPage}>
-  <div class="flex justify-center">
+  <div class="flex justify-center items-center min-h-screen mt-40">
     <div class="max-w-screen-lg">
-      <h1 class="text-center text-white text-3xl mb-4 sm:text-4xl">
-        Bienvenidos al portafolio del PotatoXx
-      </h1>
-      <p class="text-left text-white mb-4 sm:text-lg">
-        Gracias por visitar mi portafolio. Aquí, te presento una variedad de
-        proyectos que reflejan mi experiencia y habilidades en el desarrollo. Si
-        ves algo que te llama la atención y quieres colaborar, no dudes en
-        contactarme.
-      </p>
-      <p class="text-left text-white mb-4 sm:text-lg">
-        Desde aplicaciones web hasta análisis de datos, aquí encontrarás un
-        abanico de mis habilidades técnicas.
-      </p>
-
-      <div class="w-auto mb-8">
-        <p class="text-left text-white mb-4 mt-10 sm:text-lg">
-          Algunos de los lenguajes en los que he trabajado
-        </p>
-        <ul
-          role="list"
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3"
-        >
-          <Card href="/projects" title="Python" body="Desarrollo de scripts." />
-          <Card
-            href="/projects"
-            title="Java"
-            body="Aplicaciones empresariales."
-          />
-          <Card
-            href="/projects"
-            title="JavaScript"
-            body="Desarrollo front-end y data engineering."
-          />
-          <Card
-            href="/projects"
-            title="SQL"
-            body="Gestión de bases de datos."
-          />
-        </ul>
-      </div>
+      <Hero />
+      <About />
+      <Experience />
+      <Education />
+      <Projects />
+      <Courses />
+      <Skills />
     </div>
   </div>
 </Layout>
-
-<style>
-  .ad-container {
-    min-width: 320px;
-  }
-</style>
