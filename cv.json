@@ -261,7 +261,65 @@
 		  "keywords": [
 			"Oratoria"
 		  ]
-		}],
+		},
+		{
+		  "name": "Base de Datos",
+		  "level": "Intermedio",
+		  "keywords": [
+			"Administración de bases de datos",
+			"Diseño de bases de datos"
+		  ]
+		},
+		{
+		  "name": "SQL",
+		  "level": "Intermedio",
+		  "keywords": [
+			"Consultas SQL",
+			"Optimización de consultas"
+		  ]
+		},
+		{
+		  "name": "Office",
+		  "level": "Avanzado",
+		  "keywords": [
+			"Microsoft Word",
+			"Microsoft Excel",
+			"Microsoft PowerPoint"
+		  ]
+		},
+		{
+		  "name": "Linux",
+		  "level": "Intermedio",
+		  "keywords": [
+			"Administración de sistemas Linux",
+			"Shell scripting"
+		  ]
+		},
+		{
+		  "name": "Windows",
+		  "level": "Avanzado",
+		  "keywords": [
+			"Administración de sistemas Windows",
+			"Solución de problemas"
+		  ]
+		},
+		{
+		  "name": "ETL",
+		  "level": "Intermedio",
+		  "keywords": [
+			"Procesos de extracción, transformación y carga",
+			"Talend studio"
+		  ]
+		},
+		{
+		  "name": "GIT",
+		  "level": "Intermedio",
+		  "keywords": [
+			"Control de versiones",
+			"GitHub"
+		  ]
+		}
+	  ],
 	"languages": [{
 	  "language": "Español",
 	  "fluency": "Nativo"
@@ -355,7 +413,7 @@
 		{
 		  "name": "Chat en Tiempo Real con React, Express, Socket.IO y MariaDB",
 		  "isActive": false,
-		  "description": "Un chat en tiempo real que combina tecnologías modernas para ofrecer una experiencia fluida y eficiente de comunicación. Con el frontend desarrollado en React, el backend en Express, y la utilización de Socket.IO para la comunicación en tiempo real.",
+		  "description": "Un chat en tiempo real. Con el frontend desarrollado en React, el backend en Express, y la utilización de Socket.IO para la comunicación en tiempo real.",
 		  "highlights": [
 			"Comunicación en tiempo real con Socket.IO",
 			"Backend robusto construido en Express y MariaDb"
