@@ -6,7 +6,7 @@
 	  "email": "salinasgiovanni25@gmail.com",
 	  "phone": "+56950717726",
 	  "url": "https://potatox.me",
-	  "summary": "Mi nombre es Giovanni Salinas Villa, tengo 22 años y soy Ingeniero en Informática. Paralelamente a mis estudios, me he dedicado al aprendizaje autodidacta en ciberseguridad, explorando diversas metodologías y herramientas para proteger sistemas e información de las amenazas digitales.",
+	  "summary": "Mi nombre es Giovanni Salinas Villa, tengo 22 años y soy Ingeniero en Informática. Cuento con experiencia en integracion de API's, cuento con un buen manejo de lenguajes de programación. Paralelamente a mis estudios, me he dedicado al aprendizaje autodidacta en ciberseguridad, explorando diversas metodologías y herramientas para proteger sistemas e información de las amenazas digitales. Tengo experiencia en herramientas de integración continuo como Git y Jira, y me gusta colaborar con equipos para desarrollar soluciones que sean tanto escalables como eficientes.",
 	  "location": {
 		"address": "",
 		"postalCode": "9020000",
@@ -318,6 +318,13 @@
 			"Control de versiones",
 			"GitHub"
 		  ]
+		},
+		{
+		  "name": "Jira",
+		  "level": "Intermedio",
+		  "keywords": [
+			"Seguimiento de proyectos"	
+		  ]
 		}
 	  ],
 	"languages": [{
@@ -340,6 +347,16 @@
 	  "reference": ""
 	}],
 	"projects": [
+		{
+			"name": "compu-rescue",
+			"isActive": true,
+			"description": "Esta es una aplicación web que utiliza IA para diagnosticar y facilitar posibles solucione comunes en computadoras portátiles y de escritorio. ",
+			"highlights": [
+			  "Next.js",
+			  "Inteligencia Artificial"
+			],
+			"url": "https://compu-rescue.vercel.app/"
+		},
 		{
 		  "name": "Year Progress Bar",
 		  "isActive": true,
