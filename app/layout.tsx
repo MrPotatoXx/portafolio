@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { Metadata } from 'next'
 import { Source_Code_Pro } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 
 const sourceCodePro = Source_Code_Pro({
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <main className="flex-grow flex justify-center">
           {children}
         </main>
+        <GoogleAnalytics gaId="G-3K6PX2FWFD" />
       </body>
     </html>
   )
