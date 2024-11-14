@@ -5,6 +5,7 @@ interface WorldMapIconProps {
   height?: number | string;
   fill?: string;
   stroke?: string;
+  className?: string;
 }
 
 const WorldMapIcon: React.FC<WorldMapIconProps> = ({
@@ -12,6 +13,7 @@ const WorldMapIcon: React.FC<WorldMapIconProps> = ({
   height = 12,
   fill = 'none',
   stroke = 'currentColor',
+  className,
 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -23,6 +25,7 @@ const WorldMapIcon: React.FC<WorldMapIconProps> = ({
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    className={className}
   >
     <circle cx="12" cy="12" r="10"></circle>
     <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>

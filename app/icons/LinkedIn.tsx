@@ -4,13 +4,21 @@ interface LinkedInIconProps {
   width?: number | string;
   height?: number | string;
   fill?: string;
+  className?: string;
 }
 
-const LinkedInIcon: React.FC<LinkedInIconProps> = ({ width = 16, height = 16, fill = 'currentColor' }) => (
+const LinkedInIcon: React.FC<LinkedInIconProps> = ({
+  width = 16,
+  height = 16,
+  fill = 'currentColor',
+  className,
+}) => (
   <svg
     height={height}
     width={width}
     viewBox="0 0 24 24"
+    fill={fill}
+    className={className}
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>LinkedIn</title>

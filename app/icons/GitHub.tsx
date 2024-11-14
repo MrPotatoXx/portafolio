@@ -4,13 +4,21 @@ interface GitHubIconProps {
   width?: number | string;
   height?: number | string;
   fill?: string;
+  className?: string;
 }
 
-const GitHubIcon: React.FC<GitHubIconProps> = ({ width = 16, height = 16, fill = 'currentColor' }) => (
+const GitHubIcon: React.FC<GitHubIconProps> = ({
+  width = 16,
+  height = 16,
+  fill = 'currentColor',
+  className,
+}) => (
   <svg
     width={width}
     height={height}
     viewBox="0 0 24 24"
+    fill={fill}
+    className={className}
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
