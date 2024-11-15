@@ -52,7 +52,7 @@ export const Hero = async () => {
           <h1 className="text-4xl font-bold text-center">{name}</h1>
           <h2 className="text-xl text-gray-400 font-medium">{label}</h2>
           <div className="flex items-center gap-2 text-sm text-gray-300">
-            <WorldMapIcon className="w-6 h-6" />
+            <WorldMapIcon className="w-4 h-4" />
             <span>{location[0].city}, {location[0].region}</span>
           </div>
           <footer className="flex gap-2 mt-2">
