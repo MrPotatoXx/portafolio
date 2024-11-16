@@ -96,7 +96,7 @@ export const Hero = async () => {
           </footer>
           <div className="mt-4">
             <a
-              href="/resources/CV_Giovanni_Rodigo_Salinas_Villa_Programador.pdf"
+              href="/resources/CV_Giovanni_Rodigo_Salinas_Villa.pdf"
               title="Descargar CV"
               className="text-gray-300 hover:bg-gray-100 hover:text-slate-950 border border-gray-200 p-2 rounded-md transition-colors duration-300 flex items-center gap-2"
               download
