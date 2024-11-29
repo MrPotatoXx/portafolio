@@ -1,6 +1,6 @@
 import { Hero } from '@/app/components/indexsections/Hero'
 import { About } from '@/app/components/indexsections/About'
-import Experience from '@/app/components/indexsections/Experience'
+import { Experience } from '@/app/components/indexsections/Experience'
 import Education from '@/app/components/indexsections/Education'
 import Projects from '@/app/components/indexsections/Projects'
 import Courses from '@/app/components/indexsections/Courses'
