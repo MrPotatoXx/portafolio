@@ -6,3 +6,10 @@ export async function getProfile() {
 	return res.data
   })
 }
+
+export async function getExperience() {
+  return query("work-experiences?populate=*")
+  .then(res => {
+    return res.data
+  })
+}
