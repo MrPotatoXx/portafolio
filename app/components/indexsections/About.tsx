@@ -1,4 +1,4 @@
-import { getProfile } from '../../lib/gets'
+import { getProfile } from "@/app/lib/gets"
 type ProfileData = {
 	summary: string;
   }
