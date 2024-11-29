@@ -1,4 +1,4 @@
-import { getExperience } from '../../lib/gets';
+import { getExperience } from "@/app/lib/gets";
 
 type ProfileExperience = {
   name: string;
