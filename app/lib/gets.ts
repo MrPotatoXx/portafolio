@@ -13,3 +13,10 @@ export async function getExperience() {
     return res.data
   })
 }
+
+export async function getEducation(){
+  return query("educations?populate=*")
+  .then(res => {
+    return res.data
+  })
+}
