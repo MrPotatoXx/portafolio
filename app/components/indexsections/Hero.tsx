@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { getProfile } from '../../lib/gets'
+import { getProfile } from "@/app/lib/gets"
 import MailIcon from '../../icons/Mail'
 import PhoneIcon from '../../icons/Phone'
 import WorldMapIcon from '../../icons/WorldMap'
