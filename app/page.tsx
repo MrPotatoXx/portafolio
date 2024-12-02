@@ -4,7 +4,7 @@ import { Experience } from '@/app/components/indexsections/Experience'
 import { Education } from '@/app/components/indexsections/Education'
 import { Projects } from '@/app/components/indexsections/Projects'
 import { Courses } from '@/app/components/indexsections/Courses'
-import Skills from '@/app/components/indexsections/Skills'
+import { Skills } from '@/app/components/indexsections/Skills'
 
 export default function Home() {
   return (
