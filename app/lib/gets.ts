@@ -27,3 +27,10 @@ export async function getProjects(){
     return res.data
   })
 }
+
+export async function getCourses(){
+  return query("certificates?populate=*")
+  .then(res => {
+    return res.data
+  })
+}
