@@ -20,3 +20,10 @@ export async function getEducation(){
     return res.data
   })
 }
+
+export async function getProjects(){
+  return query("projects?populate=*")
+  .then(res => {
+    return res.data
+  })
+}
