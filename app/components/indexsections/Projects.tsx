@@ -12,10 +12,14 @@ export const Projects = async () => {
   try {
     const porfileProjects: PorfileProject[] = await getProjects();
 
+    const sortedProjects = porfileProjects.sort((a, b) => {
+      return b.isActive ? 1 : -1;
+    });
+
     return (
       <div className="max-w-4xl mt-8 mx-auto">
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
-          {porfileProjects.map(
+          {sortedProjects.map(
             ({ url, description, highlights, name, isActive }, index) => {
 
               const highlightsArray = Array.isArray(highlights)
@@ -28,7 +32,7 @@ export const Projects = async () => {
                 <li
                   key={index}
                   className={`border border-gray-200 rounded-lg p-6 flex flex-col h-full ${
-                    porfileProjects.length % 2 !== 0 && index === porfileProjects.length - 1
+                    sortedProjects.length % 2 !== 0 && index === sortedProjects.length - 1
                       ? "sm:col-start-1 sm:col-span-2"
                       : ""
                   }`}
@@ -44,9 +48,9 @@ export const Projects = async () => {
                           {name}
                         </a>
                         {isActive ? (
-                          <span className="text-green-500">• Activo</span>
+                          <span className="text-green-500"> • Activo</span>
                         ) : (
-                          <span className="text-red-500">• Inactivo</span>
+                          <span className="text-red-500"> • Inactivo</span>
                         )}
                       </h3>
                       <p className="text-base text-gray-300 mb-2">{description}</p>
