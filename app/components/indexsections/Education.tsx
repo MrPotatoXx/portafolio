@@ -13,7 +13,7 @@ export const Education = async () => {
     const profileEducation: ProfileEducation[] = await getEducation();
 
     return (
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mt-8 mx-auto">
         <ul className="flex flex-col gap-8">
           {profileEducation.map(({ institution, startDate, endDate, area, score }) => {
             const startYear = new Date(startDate).getFullYear();
@@ -30,7 +30,9 @@ export const Education = async () => {
                     </div>
                     <div className="text-right">
                       <time className="text-sm text-gray-300">{years}</time>
-                      {score && <p className="text-sm text-gray-300">Promedio: {score}</p>}
+                      {score !== undefined && (
+                        <p className="text-sm text-gray-300">Promedio: {score.toFixed(1)}</p>
+                      )}
                     </div>
                   </header>
                 </article>
