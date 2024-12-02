@@ -34,3 +34,10 @@ export async function getCourses(){
     return res.data
   })
 }
+
+export async function getSkills(){
+  return query("skills?populate=*")
+  .then(res => {
+    return res.data
+  })
+}
