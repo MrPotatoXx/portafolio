@@ -2,7 +2,8 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -10,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
@@ -20,16 +21,29 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build
+    - name: Build Next.js app
       run: npm run build
 
-    - name: Deploy to Server
-      uses: appleboy/scp-action@master
-      with:
-        host: ${{ secrets.SERVER_HOST }}
-        username: ${{ secrets.SERVER_USER }}
-        password: ${{ secrets.SERVER_PASSWORD }}
-        port: ${{ secrets.SERVER_PORT }}
-        source: "dist/*"
-        target: "/srv/www/html/"
-        strip_components: 1
+    - name: Transfer files to server
+      env:
+        STRAPI_TOKEN: ${{ secrets.STRAPI_TOKEN }}
+        STRAPI_HOST: ${{ secrets.STRAPI_HOST }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+
+        # Sincronizar archivos con el servidor usando rsync
+        rsync -avz --delete --exclude='.next/cache' ./ ${{ secrets.SERVER_HOST }}:/ruta/a/tu/proyecto/
+
+    - name: Run remote commands
+      run: |
+        ssh -i ~/.ssh/id_ed25519 user@${{ secrets.SERVER_IP }} << 'EOF'
+          export STRAPI_TOKEN=${{ secrets.STRAPI_TOKEN }}
+          export STRAPI_HOST=${{ secrets.STRAPI_HOST }}
+
+          cd /srv/www/html
+          npm install
+          pm2 restart nextjs-app || pm2 start npm --name "nextjs-app" -- start
+        EOF
