@@ -49,3 +49,11 @@ jobs:
           npm install
           pm2 restart nextjs-app || pm2 start npm --name "nextjs-app" -- start
         EOF
+    - name: Start portafolio with PM2
+      env:
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_PASSWORD: ${{ secrets.SERVER_PASSWORD }}
+          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+      run: |
+            shpass -p "${SERVER_PASSWORD}" ssh -o "StrictHostKeyChecking=no" ${SERVER_USER}@${SERVER_HOST} -p ${SERVER_PORT} "cd /srv/www/html && pm2 start pnpm --name portafolio -- run start"
