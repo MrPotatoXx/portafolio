@@ -19,7 +19,7 @@ jobs:
         node-version: 21
 
     - name: Install dependencies
-      run: npm install
+      run: npm install --legacy-peer-deps
 
     - name: Build Next.js app
       run: npm run build
@@ -39,7 +39,7 @@ jobs:
 
     - name: Run remote commands
       run: |
-        ssh -i ~/.ssh/id_ed25519 user@${{ secrets.SERVER_IP }} << 'EOF'
+        ssh -i ~/.ssh/id_ed25519 user@${{ secrets.SERVER_HOST }} << 'EOF'
           export STRAPI_TOKEN=${{ secrets.STRAPI_TOKEN }}
           export STRAPI_HOST=${{ secrets.STRAPI_HOST }}
 
