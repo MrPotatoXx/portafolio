@@ -21,6 +21,11 @@ jobs:
     - name: Install dependencies
       run: npm install --legacy-peer-deps
 
+    - name: Create .env file
+      run: |
+        echo "STRAPI_TOKEN=${{ secrets.STRAPI_TOKEN }}" >> .env
+        echo "STRAPI_HOST=${{ secrets.STRAPI_HOST }}" >> .env
+
     - name: Build Next.js app
       run: npm run build
 
