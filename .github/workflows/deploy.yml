@@ -40,7 +40,7 @@ jobs:
         ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
         # Sincronizar archivos con el servidor usando rsync
-        rsync -avz --delete --exclude='.next/cache' ./ ${{ secrets.SERVER_HOST }}:/ruta/a/tu/proyecto/
+        rsync -avz --delete --exclude='.next/cache' ./ ${{ secrets.SERVER_HOST }}:/srv/www/html/
 
     - name: Run remote commands
       run: |
