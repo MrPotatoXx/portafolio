@@ -39,16 +39,6 @@ jobs:
         source: "./"
         target: "/srv/www/html/"
 
-    - name: Run remote commands
-      run: |
-        ssh -i ~/.ssh/id_ed25519 ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
-          export STRAPI_TOKEN=${{ secrets.STRAPI_TOKEN }}
-          export STRAPI_HOST=${{ secrets.STRAPI_HOST }}
-
-          cd /srv/www/html
-          npm install
-          pm2 restart nextjs-app || pm2 start npm --name "nextjs-app" -- start
-        EOF
     - name: Start portafolio with PM2
       env:
           SERVER_HOST: ${{ secrets.SERVER_HOST }}
