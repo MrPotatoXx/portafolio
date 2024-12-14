@@ -29,17 +29,19 @@ jobs:
     - name: Build Next.js app
       run: npm run build
 
-    - name: Transfer files to server
-      env:
-        STRAPI_TOKEN: ${{ secrets.STRAPI_TOKEN }}
-        STRAPI_HOST: ${{ secrets.STRAPI_HOST }}
+    - name: Set up SSH keys
       run: |
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
         ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
-        # Sincronizar archivos con el servidor usando rsync
+    - name: Transfer files to server
+      env:
+        STRAPI_TOKEN: ${{ secrets.STRAPI_TOKEN }}
+        STRAPI_HOST: ${{ secrets.STRAPI_HOST }}
+      run: |
+        # Verifica que la clave SSH sea válida y que la conectividad esté establecida
         rsync -avz --delete --exclude='.next/cache' ./ ${{ secrets.SERVER_HOST }}:/srv/www/html/
 
     - name: Run remote commands
