@@ -1,8 +1,8 @@
 # Mi Portafolio Web en Astro ✨
 
-Bienvenido a mi portafolio web, construido con el maravilloso framework [NextJs](https://nextjs.org/). Aquí podrás encontrar una muestra de mis proyectos, habilidades, y obtener una idea más clara de lo que soy capaz de hacer como desarrollador.
+Bienvenido a mi portafolio web, construido con el maravilloso framework [Astro](https://astro.build/). Aquí podrás encontrar una muestra de mis proyectos, habilidades, y obtener una idea más clara de lo que soy capaz de hacer como desarrollador.
 
-![Portafolio Preview](https://potatox.me/images/portafolio.png)
+![Portafolio Preview](https://potatox.me/)
 
 ## 🌐 Live Demo
 
@@ -10,7 +10,7 @@ Visita mi portafolio en vivo en: [potatox.me](https://potatox.me/)
 
 ## 🛠️ Características
 
-- **Optimización del rendimiento:** Gracias a NextJs, el sitio web es increíblemente rápido.
+- **Optimización del rendimiento:** Gracias a Astro, el sitio web es increíblemente rápido.
 - **SEO optimizado:** Toda la configuración necesaria para una buena SEO ya está implementada.
 - **Responsive:** Totalmente adaptativo para cualquier dispositivo.
 - **Dark Mode:** Porque a todos nos encanta un buen tema oscuro.
