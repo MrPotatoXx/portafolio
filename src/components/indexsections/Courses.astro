@@ -1,0 +1,34 @@
+---
+import Section from "@/components/Section.astro";
+import { certificates } from "@cv";
+---
+
+<Section>
+  <div class="max-w-4xl mx-auto">
+    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {
+        certificates.map(({ name, date, issuer, url }, index) => (
+          <li class="border border-gray-200 rounded-lg p-4 flex flex-col">
+            <header>
+              <h3 class="text-lg text-gray-200 font-semibold">{name}</h3>
+              <p class="text-sm text-gray-400">Emitido por: {issuer}</p>
+              <p class="text-sm text-gray-400">Fecha: {date}</p>
+            </header>
+            {url && (
+              <footer class="mt-auto">
+                <a
+                  href={url}
+                  class="text-blue-600 hover:text-blue-800 text-sm no-print"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver certificado
+                </a>
+              </footer>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Section>

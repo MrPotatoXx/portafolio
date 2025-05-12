@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import About from "@/components/indexsections/About.astro";
+import Education from "@/components/indexsections/Education.astro";
+import Experience from "@/components/indexsections/Experience.astro";
+import Hero from "@/components/indexsections/Hero.astro";
+import Projects from "@/components/indexsections/Projects.astro";
+import Skills from "@/components/indexsections/Skills.astro";
+import Courses from "@/components/indexsections/Courses.astro";
+
+---
+
+<Layout title="Giovanni Salinas - Portafolio">
+  <div class="flex justify-center items-center min-h-screen mt-40">
+    <div class="max-w-screen-lg">
+      <Hero />
+      <About />
+      <Experience />
+      <Education />
+      <Projects />
+      <Courses />
+      <Skills />
+    </div>
+  </div>
+</Layout>
