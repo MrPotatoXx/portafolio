@@ -3,8 +3,8 @@ import Section from "@/components/Section.astro";
 import { education } from "@cv";
 ---
 
-<Section>
-  <div class="max-w-4xl mx-auto mt-8 mb-8">
+<Section title="Educación">
+  <div class="max-w-3xl mx-auto w-full bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl shadow-xl border-2 border-sky-900/30 p-4 md:p-6 mb-4">
     <ul class="flex flex-col gap-8">
       {
         education.map(({ institution, startDate, endDate, area, score }) => {
@@ -12,26 +12,25 @@ import { education } from "@cv";
           const endYear = endDate ? endDate : "Actual";
           const years = `${startYear} - ${endYear}`;
 
-          return (
-            <li class="border border-gray-200 rounded-lg p-4">
-              <article class="space-y-2">
-                <header class="flex justify-between items-center">
-                  <div>
-                    <h3 class="font-medium text-lg text-gray-200">
-                      {institution}
-                    </h3>
-                    <p class="text-sm text-gray-300">{area}</p>
-                  </div>
-                  <div class="text-right">
-                    <time class="text-sm text-gray-300">{years}</time>
-                    <p class="text-sm text-gray-300">Promedio: {score}</p>
-                  </div>
-                </header>
-              </article>
-            </li>
-          );
-        })
-      }
-    </ul>
+            return (
+              <li class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 shadow-xl border-2 border-sky-900/30 rounded-2xl p-4 md:p-6 text-sm md:text-base">
+                <article class="space-y-2">
+                  <header class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+                    <div>
+                      <h3 class="font-bold text-lg text-sky-300">{institution}</h3>
+                      <p class="text-sm text-gray-300">{area}</p>
+                    </div>
+                    <div class="flex flex-col md:items-end gap-2">
+                      <span class="inline-block px-3 py-1 bg-sky-600/20 text-sky-300 rounded-full text-xs font-semibold border border-sky-500/30">{years}</span>
+                      <span class="inline-block px-3 py-1 bg-cyan-600/20 text-cyan-200 rounded-full text-xs font-semibold border border-cyan-500/30">Promedio: {score}</span>
+                    </div>
+                  </header>
+                </article>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
   </div>
 </Section>
