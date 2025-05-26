@@ -398,7 +398,7 @@
 	"projects": [
 		{
 			"name": "compu-rescue",
-			"isActive": true,
+			"isActive": false,
 			"description": "Esta es una aplicación web que utiliza IA para diagnosticar y facilitar posibles solucione comunes en computadoras portátiles y de escritorio. ",
 			"highlights": [
 			  "Next.js",
