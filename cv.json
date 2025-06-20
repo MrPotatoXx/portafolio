@@ -26,6 +26,17 @@
 	  }]
 	},
 	"work": [{
+		"name": "Patrimore",
+		"position": "Front-end Developer",
+		"url": "https://patrimore.com/",
+		"startDate": "02-06-2025",
+		"endDate": "",
+		"summary": "Desarrollador frontend enfocado en la creación de interfaces web funcionales, accesibles y responsivas. Trabajo con herramientas modernas y apoyo de inteligencia artificial para optimizar la construcción de componentes, pantallas y flujos. Encargado de validar y refinar el código generado, manteniendo buenas prácticas de desarrollo en entornos ágiles y colaborativos.",
+		"highlights": [
+			""
+		]
+		},
+		{
 		"name": "Infos Ltda",
 		"position": "Tecnico Instalador",
 		"url": "https://infos.cl/",
@@ -37,15 +48,15 @@
 		]
 	  },
 	  {
-	  "name": "TestGroup",
-	  "position": "Analista de TI - Práctica Profesional",
-	  "url": "https://testgroup.cl/",
-	  "startDate": "15-01-2024",
-	  "endDate": "13-03-2024",
-	  "summary": "Práctica de Seguridad de Sistemas Informáticos, adquiriendo conocimientos clave en protección de infraestructuras de TI y gestión de riesgos de seguridad. Comprometido con el aprendizaje continuo en el ámbito empresarial.",
-	  "highlights": [
-		""
-	  ]
+		"name": "TestGroup",
+		"position": "Analista de TI - Práctica Profesional",
+		"url": "https://testgroup.cl/",
+		"startDate": "15-01-2024",
+		"endDate": "13-03-2024",
+		"summary": "Práctica de Seguridad de Sistemas Informáticos, adquiriendo conocimientos clave en protección de infraestructuras de TI y gestión de riesgos de seguridad. Comprometido con el aprendizaje continuo en el ámbito empresarial.",
+		"highlights": [
+			""
+		]
 	},
 	{
 		"name": "TRES60",
