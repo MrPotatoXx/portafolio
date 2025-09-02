@@ -26,6 +26,9 @@ const SOCIAL_ICONS: SocialIcon = {
         src={image}
         alt={name}
         class="aspect-square object-cover rounded-lg border-4 border-sky-400 shadow-lg"
+        decoding="async"
+        loading="eager"
+        fetchpriority="high"
       />
       <span class="inline-flex items-center gap-1 px-3 py-1 bg-sky-600/20 text-sky-300 rounded-full text-xs font-semibold tracking-wide uppercase border border-sky-500/30 text-center mt-4 w-full max-w-[90vw] min-w-[70vw] sm:max-w-max sm:min-w-0 sm:w-auto justify-center">
         <span class="text-base">👨‍💻</span> {label}
@@ -46,8 +49,7 @@ const SOCIAL_ICONS: SocialIcon = {
             <a
               href={`mailto:${email}`}
               title={`Enviar un correo electrónico a ${name} al correo ${email}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              aria-label={`Enviar correo a ${name}`}
               class="bg-gradient-to-r from-sky-400/20 to-cyan-400/20 text-sky-200 border border-sky-500/30 p-2 rounded-md hover:bg-sky-400/40 transition-all duration-200 shadow-sm"
             >
               <Mail class="w-6 h-6" />
@@ -59,8 +61,7 @@ const SOCIAL_ICONS: SocialIcon = {
             <a
               href={`tel:${phone}`}
               title={`Llamar por teléfono a ${name} al número ${phone}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              aria-label={`Llamar a ${name}`}
               class="bg-gradient-to-r from-sky-400/20 to-cyan-400/20 text-sky-200 border border-sky-500/30 p-2 rounded-md hover:bg-sky-400/40 transition-all duration-200 shadow-sm"
             >
               <Phone class="w-6 h-6" />
@@ -70,11 +71,12 @@ const SOCIAL_ICONS: SocialIcon = {
         {
           profiles.map(({ network, url }) => {
             const Icon = SOCIAL_ICONS[network];
-
+            if (!Icon) return null;
             return (
               <a
                 href={url}
                 title={`Visitar el perfil de ${name} en ${network}`}
+                aria-label={`Visitar el perfil de ${name} en ${network}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="bg-gradient-to-r from-sky-400/20 to-cyan-400/20 text-sky-200 border border-sky-500/30 p-2 rounded-md hover:bg-sky-400/40 transition-all duration-200 shadow-sm"
@@ -91,6 +93,7 @@ const SOCIAL_ICONS: SocialIcon = {
         <a
           href="/resources/CV_Giovanni_Rodigo_Salinas_Villa.pdf"
           title="Descargar CV"
+          aria-label={`Descargar CV de ${name}`}
           class="bg-gradient-to-r from-sky-400/20 to-cyan-400/20 text-sky-200 border border-sky-500/30 p-2 rounded-md hover:bg-sky-400/40 transition-all duration-200 shadow-sm flex items-center gap-2"
           download
         >
