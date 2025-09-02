@@ -2,7 +2,7 @@
 
 Bienvenido a mi portafolio web, construido con el maravilloso framework [Astro](https://astro.build/). Aquí podrás encontrar una muestra de mis proyectos, habilidades, y obtener una idea más clara de lo que soy capaz de hacer como desarrollador.
 
-![Portafolio Preview](https://potatox.me/)
+Vista previa en línea: https://potatox.me/
 
 ## 🌐 Live Demo
 
@@ -51,5 +51,5 @@ Este es un proyecto personal, pero si tienes alguna sugerencia o mejora, siénte
 
 ## 📄 Licencia
 
-Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE.md](LICENSE) para más detalles.
+Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
