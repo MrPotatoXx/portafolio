@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Opcional: reduce la carga del servidor
+# Crawl-delay: 5
+
+# Evitar indexar la página 404
+Disallow: /404
+Disallow: /404.html
+
+Sitemap: https://potatox.me/sitemap-index.xml
