@@ -16,14 +16,14 @@ interface Props {
 const defaultDescription = "Portafolio desarrollado en el framework Astro de Giovanni Salinas, Ingeniero en Informática.";
 const { title, description, image, canonical, noindex } = Astro.props as Props;
 
-const toAbs = (pathOrUrl?: string) => {
-  if (!pathOrUrl) return new URL("/favicon.png", Astro.site).toString();
+const toAbs = (pathOrUrl?: string, fallback = "/favicon.png") => {
+  const candidate = pathOrUrl ?? fallback;
   try {
-    return pathOrUrl.startsWith("http")
-      ? pathOrUrl
-      : new URL(pathOrUrl, Astro.site).toString();
+    if (!candidate) return fallback;
+    if (candidate.startsWith("http")) return candidate;
+    return Astro.site ? new URL(candidate, Astro.site).toString() : candidate;
   } catch {
-    return pathOrUrl;
+    return candidate;
   }
 };
 
