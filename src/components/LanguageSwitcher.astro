@@ -1,16 +1,23 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
 interface Props {
   lang: 'es' | 'en';
+  currentPath?: string;
 }
-const { lang } = Astro.props as Props;
+const { lang, currentPath } = Astro.props as Props;
 const other = lang === 'es' ? 'en' : 'es';
 const label = other === 'es' ? 'ES' : 'EN';
 const title = other === 'es' ? 'Cambiar a Español' : 'Switch to English';
+
+const pathname = currentPath ?? '/';
+const current = lang;
+const relativePath = pathname.replace(new RegExp(`^/${current}(/|$)`), '');
+const targetHref = getRelativeLocaleUrl(other, relativePath);
 ---
 
 <div class="fixed top-4 right-4 z-50">
   <a
-    href={`/${other}/`}
+    href={targetHref}
     title={title}
     aria-label={title}
     class="inline-flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-sky-400/20 to-cyan-400/20 text-sky-200 border border-sky-500/30 rounded-full text-xs font-medium hover:bg-sky-400/40 transition-all duration-200 shadow-sm backdrop-blur-sm"
