@@ -5,6 +5,7 @@ import SpeedInsights from "@vercel/speed-insights/astro"
 import type { Messages } from "@/i18n";
 import "../styles/global.css";
 import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
+import { getAbsoluteLocaleUrl } from 'astro:i18n';
 
 interface Props {
   title: string;
@@ -39,9 +40,15 @@ const canonicalUrlStr = (() => {
 const seoDescription = description ?? defaultDescription;
 const imageUrl = toAbs(image ?? "/favicon.png");
 const robotsContent = noindex ? "noindex, nofollow" : "index, follow";
-const currentLang = (t?.lang ?? lang ?? 'es');
+const currentLang = (Astro.currentLocale ?? t?.lang ?? lang ?? 'es') as 'es' | 'en';
 const hreflang = (t?.locales?.hreflang ?? 'es');
 const ogLocale = (t?.locales?.og ?? 'es_CL');
+
+// i18n alternate links for current path
+const localeForPath = (currentLang === 'en' ? 'en' : 'es') as 'es' | 'en';
+const pathWithoutLocale = Astro.url.pathname.replace(new RegExp(`^/${localeForPath}(/|$)`), '');
+const altEs = getAbsoluteLocaleUrl('es', pathWithoutLocale);
+const altEn = getAbsoluteLocaleUrl('en', pathWithoutLocale);
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -87,9 +94,9 @@ const websiteSchema = {
 
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<link rel="canonical" href={canonicalUrlStr} />
-		<link rel="alternate" href={toAbs('/es/')} hreflang="es" />
-		<link rel="alternate" href={toAbs('/en/')} hreflang="en" />
-		<link rel="alternate" href={toAbs('/es/')} hreflang="x-default" />
+		<link rel="alternate" href={altEs} hreflang="es" />
+		<link rel="alternate" href={altEn} hreflang="en" />
+		<link rel="alternate" href={altEs} hreflang="x-default" />
 
 		<meta name="robots" content={robotsContent} />
 		<meta name="googlebot" content={robotsContent} />
@@ -118,7 +125,7 @@ const websiteSchema = {
 		<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
 	</head>
 	<body class="flex flex-col min-h-screen bg-dark-gradient-dots px-10">
-		<LanguageSwitcher lang={currentLang === 'en' ? 'en' : 'es'} />
+		<LanguageSwitcher lang={currentLang === 'en' ? 'en' : 'es'} currentPath={Astro.url.pathname} />
 		<main class="flex-grow flex justify-center">
 		  <slot />
 		  <Analytics />
