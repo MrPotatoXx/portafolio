@@ -1,21 +1,4 @@
 ---
-const supported = ['es', 'en'] as const;
-const accept = Astro.request?.headers.get('accept-language') ?? '';
-const langs = accept
-  .split(',')
-  .map((p) => p.split(';')[0].trim().toLowerCase())
-  .filter(Boolean);
-const base = langs.map((l) => l.split('-')[0]);
-const choice = base.find((l) => supported.includes(l as any)) ?? 'es';
-Astro.redirect(`/${choice}/`);
+// Redirect handled by Astro i18n (astro.config i18n.routing.redirectToDefaultLocale)
 ---
 
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=/es/" />
-    <title>...</title>
-  </head>
-  <body></body>
-</html> 
