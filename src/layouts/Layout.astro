@@ -2,8 +2,9 @@
 import Analytics from '@vercel/analytics/astro'
 import SpeedInsights from "@vercel/speed-insights/astro"
 
+import type { Messages } from "@/i18n";
 import "../styles/global.css";
-import cv from "../../cv.json";
+import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
 
 interface Props {
   title: string;
@@ -11,10 +12,13 @@ interface Props {
   image?: string;
   canonical?: string;
   noindex?: boolean;
+  lang?: string;
+  t?: Messages;
+  cv?: any;
 }
 
-const defaultDescription = "Portafolio desarrollado en el framework Astro de Giovanni Salinas, Ingeniero en Informática.";
-const { title, description, image, canonical, noindex } = Astro.props as Props;
+const { title, description, image, canonical, noindex, lang = 'es', t, cv } = Astro.props as Props;
+const defaultDescription = t?.site?.description ?? "Portafolio desarrollado en el framework Astro de Giovanni Salinas, Ingeniero en Informática.";
 
 const toAbs = (pathOrUrl?: string, fallback = "/favicon.png") => {
   const candidate = pathOrUrl ?? fallback;
@@ -35,23 +39,27 @@ const canonicalUrlStr = (() => {
 const seoDescription = description ?? defaultDescription;
 const imageUrl = toAbs(image ?? "/favicon.png");
 const robotsContent = noindex ? "noindex, nofollow" : "index, follow";
+const currentLang = (t?.lang ?? lang ?? 'es');
+const hreflang = (t?.locales?.hreflang ?? 'es');
+const ogLocale = (t?.locales?.og ?? 'es_CL');
 
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": cv.basics?.name,
-  "url": cv.basics?.url,
-  "image": cv.basics?.image,
-  "sameAs": (cv.basics?.profiles || []).map((p) => p.url),
-  "jobTitle": cv.basics?.label,
-  "email": `mailto:${cv.basics?.email}`,
-  "telephone": cv.basics?.phone,
+  "name": cv?.basics?.name,
+  "url": cv?.basics?.url,
+  "image": cv?.basics?.image,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  "sameAs": (cv?.basics?.profiles ?? []).map((p: any) => p.url),
+  "jobTitle": cv?.basics?.label,
+  "email": cv?.basics?.email ? `mailto:${cv?.basics?.email}` : undefined,
+  "telephone": cv?.basics?.phone,
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": cv.basics?.location?.city,
-    "addressRegion": cv.basics?.location?.region,
-    "postalCode": cv.basics?.location?.postalCode,
-    "addressCountry": cv.basics?.location?.countryCode
+    "addressLocality": cv?.basics?.location?.city,
+    "addressRegion": cv?.basics?.location?.region,
+    "postalCode": cv?.basics?.location?.postalCode,
+    "addressCountry": cv?.basics?.location?.countryCode
   }
 };
 
@@ -59,12 +67,12 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Portafolio de Giovanni Salinas",
-  "url": cv.basics?.url
+  "url": cv?.basics?.url
 };
 ---
 
 
-<html lang="es">
+<html lang={currentLang}>
 	<head>
 		<title>{title}</title>
 
@@ -73,13 +81,15 @@ const websiteSchema = {
 		<meta name="description" content={seoDescription} />
 		<meta name="keywords" content="Giovanni Salinas, Ingeniería en Informática, Ciberseguridad, Desarrollo Web, Programación, Python, Ethical Hacker" />
 		<meta name="author" content="Giovanni Salinas" />
-		<meta http-equiv="content-language" content="es" />
-		<meta name="application-name" content="Portafolio de Giovanni Salinas" />
+		<meta http-equiv="content-language" content={hreflang} />
+		<meta name="application-name" content={t?.site?.applicationName ?? "Portafolio de Giovanni Salinas"} />
 		<meta name="theme-color" content="#0ea5e9" />
 
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<link rel="canonical" href={canonicalUrlStr} />
-		<link rel="alternate" href={canonicalUrlStr} hreflang="es-cl" />
+		<link rel="alternate" href={toAbs('/es/')} hreflang="es" />
+		<link rel="alternate" href={toAbs('/en/')} hreflang="en" />
+		<link rel="alternate" href={toAbs('/es/')} hreflang="x-default" />
 
 		<meta name="robots" content={robotsContent} />
 		<meta name="googlebot" content={robotsContent} />
@@ -95,7 +105,7 @@ const websiteSchema = {
 		<meta property="og:image" content={imageUrl} />
 		<meta property="og:url" content={canonicalUrlStr} />
 		<meta property="og:site_name" content="Giovanni Salinas" />
-		<meta property="og:locale" content="es_CL" />
+		<meta property="og:locale" content={ogLocale} />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -108,6 +118,7 @@ const websiteSchema = {
 		<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
 	</head>
 	<body class="flex flex-col min-h-screen bg-dark-gradient-dots px-10">
+		<LanguageSwitcher lang={currentLang === 'en' ? 'en' : 'es'} />
 		<main class="flex-grow flex justify-center">
 		  <slot />
 		  <Analytics />
