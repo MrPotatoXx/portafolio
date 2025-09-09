@@ -1,19 +1,23 @@
 ---
 import Section from "@/components/Section.astro";
-import { work } from "@cv";
+import { getTranslations, getCv } from "@/translations";
+
+const currentLocale = Astro.currentLocale as 'es' | 'en' || 'es';
+const t = getTranslations(currentLocale);
+const cv = getCv(currentLocale);
 ---
 
-<Section title="Experiencia">
+<Section title={t.sections.experience}>
   <div class="max-w-3xl mx-auto w-full bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl shadow-xl border-2 border-sky-900/30 p-4 md:p-6 mb-4">
     <ul class="flex flex-col gap-8">
       {
-        work.map(({ name, startDate, endDate, position, summary }) => {
+        cv.work.map(({ name, startDate, endDate, position, summary }) => {
           const startYear = new Date(
             startDate.split("-").reverse().join("-"),
           ).getFullYear();
           const endYear = endDate
             ? new Date(endDate.split("-").reverse().join("-")).getFullYear()
-            : "Actual";
+            : t.experience.current;
           const years = `${startYear} - ${endYear}`;
 
           return (
