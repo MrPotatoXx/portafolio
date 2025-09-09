@@ -1,9 +1,10 @@
 ---
 import Analytics from '@vercel/analytics/astro'
 import SpeedInsights from "@vercel/speed-insights/astro"
+import LanguageSwitch from "@/components/LanguageSwitch.astro";
 
 import "../styles/global.css";
-import cv from "../../cv.json";
+import { getCv } from "@/translations";
 
 interface Props {
   title: string;
@@ -13,7 +14,12 @@ interface Props {
   noindex?: boolean;
 }
 
-const defaultDescription = "Portafolio desarrollado en el framework Astro de Giovanni Salinas, Ingeniero en Informática.";
+import { getTranslations } from "@/translations";
+
+const currentLocale = Astro.currentLocale as 'es' | 'en' || 'es';
+const t = getTranslations(currentLocale);
+const cv = getCv(currentLocale);
+const defaultDescription = t.meta.description;
 const { title, description, image, canonical, noindex } = Astro.props as Props;
 
 const toAbs = (pathOrUrl?: string, fallback = "/favicon.png") => {
@@ -64,16 +70,16 @@ const websiteSchema = {
 ---
 
 
-<html lang="es">
+<html lang={currentLocale}>
 	<head>
 		<title>{title}</title>
 
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content={seoDescription} />
-		<meta name="keywords" content="Giovanni Salinas, Ingeniería en Informática, Ciberseguridad, Desarrollo Web, Programación, Python, Ethical Hacker" />
+		<meta name="keywords" content={t.meta.keywords} />
 		<meta name="author" content="Giovanni Salinas" />
-		<meta http-equiv="content-language" content="es" />
+		<meta http-equiv="content-language" content={currentLocale} />
 		<meta name="application-name" content="Portafolio de Giovanni Salinas" />
 		<meta name="theme-color" content="#0ea5e9" />
 
@@ -104,10 +110,11 @@ const websiteSchema = {
 			rel="stylesheet"
 		/>
 
-		<script type="application/ld+json" set:html={JSON.stringify(personSchema)}></script>
-		<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+		<script type="application/ld+json" is:inline set:html={JSON.stringify(personSchema)}></script>
+		<script type="application/ld+json" is:inline set:html={JSON.stringify(websiteSchema)}></script>
 	</head>
 	<body class="flex flex-col min-h-screen bg-dark-gradient-dots px-10">
+		<LanguageSwitch />
 		<main class="flex-grow flex justify-center">
 		  <slot />
 		  <Analytics />
