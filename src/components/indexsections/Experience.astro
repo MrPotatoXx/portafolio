@@ -1,19 +1,34 @@
 ---
 import Section from "@/components/Section.astro";
-import { work } from "@cv";
+import type { Messages } from "@/i18n";
+
+interface Props {
+  t: Messages;
+  cv: any;
+}
+
+const { t, cv } = Astro.props as Props;
+const work = cv.work as Array<{
+  name: string;
+  position: string;
+  url?: string;
+  startDate: string;
+  endDate?: string;
+  summary: string;
+}>;
 ---
 
-<Section title="Experiencia">
+<Section title={t.sections.experience}>
   <div class="max-w-3xl mx-auto w-full bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl shadow-xl border-2 border-sky-900/30 p-4 md:p-6 mb-4">
     <ul class="flex flex-col gap-8">
       {
-        work.map(({ name, startDate, endDate, position, summary }) => {
+        work.map(({ name, startDate, endDate, position, summary }: { name: string; startDate: string; endDate?: string; position: string; summary: string; }) => {
           const startYear = new Date(
             startDate.split("-").reverse().join("-"),
           ).getFullYear();
           const endYear = endDate
             ? new Date(endDate.split("-").reverse().join("-")).getFullYear()
-            : "Actual";
+            : t.work.current;
           const years = `${startYear} - ${endYear}`;
 
           return (

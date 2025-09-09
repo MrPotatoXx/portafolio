@@ -1,15 +1,29 @@
 ---
 import Section from "@/components/Section.astro";
-import { education } from "@cv";
+import type { Messages } from "@/i18n";
+
+interface Props {
+  t: Messages;
+  cv: any;
+}
+
+const { t, cv } = Astro.props as Props;
+const education = cv.education as Array<{
+  institution: string;
+  startDate: string;
+  endDate?: string;
+  area: string;
+  score?: string;
+}>;
 ---
 
-<Section title="Educación">
+<Section title={t.sections.education}>
   <div class="max-w-3xl mx-auto w-full bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl shadow-xl border-2 border-sky-900/30 p-4 md:p-6 mb-4">
     <ul class="flex flex-col gap-8">
       {
-        education.map(({ institution, startDate, endDate, area, score }) => {
+        education.map(({ institution, startDate, endDate, area, score }: { institution: string; startDate: string; endDate?: string; area: string; score?: string; }) => {
           const startYear = startDate;
-          const endYear = endDate ? endDate : "Actual";
+          const endYear = endDate ? endDate : t.work.current;
           const years = `${startYear} - ${endYear}`;
 
             return (
@@ -22,7 +36,9 @@ import { education } from "@cv";
                     </div>
                     <div class="flex flex-col md:items-end gap-2">
                       <span class="inline-block px-3 py-1 bg-sky-600/20 text-sky-300 rounded-full text-xs font-semibold border border-sky-500/30">{years}</span>
-                      <span class="inline-block px-3 py-1 bg-cyan-600/20 text-cyan-200 rounded-full text-xs font-semibold border border-cyan-500/30">Promedio: {score}</span>
+                      {score && (
+                        <span class="inline-block px-3 py-1 bg-cyan-600/20 text-cyan-200 rounded-full text-xs font-semibold border border-cyan-500/30">{t.education.average}: {score}</span>
+                      )}
                     </div>
                   </header>
                 </article>

@@ -1,9 +1,22 @@
 ---
 import Section from "@/components/Section.astro";
-import { certificates } from "@cv";
+import type { Messages } from "@/i18n";
 import Certificate from "@/icons/Certificate.astro";
 import Cisco from "@/icons/Cisco.astro";
 import CertLinkedIn from "@/icons/CertLinkedIn.astro";
+
+interface Props {
+  t: Messages;
+  cv: any;
+}
+
+const { t, cv } = Astro.props as Props;
+const certificates = cv.certificates as Array<{
+  name: string;
+  date: string;
+  issuer: string;
+  url?: string;
+}>;
 
 const getIcon = (issuer: string) => {
   switch (issuer.toLowerCase()) {
@@ -17,11 +30,11 @@ const getIcon = (issuer: string) => {
 };
 ---
 
-<Section title="Certificaciones">
+<Section title={t.sections.certificates}>
   <div class="max-w-3xl mx-auto w-full bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl shadow-xl border-2 border-sky-900/30 p-4 md:p-6 mb-4">
     <ul class="flex flex-col gap-3">
       {
-        certificates.map(({ name, date, issuer, url }) => {
+        certificates.map(({ name, date, issuer, url }: { name: string; date: string; issuer: string; url?: string }) => {
           const Icon = getIcon(issuer);
           return (
             <li class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 shadow-xl border border-sky-900/30 rounded-lg overflow-hidden transition-transform duration-200 hover:scale-[1.02] text-xs md:text-sm">
@@ -43,7 +56,7 @@ const getIcon = (issuer: string) => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Ver certificado
+                        {t.certificates.viewCertificate}
                       </a>
                     )}
                   </div>
