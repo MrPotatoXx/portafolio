@@ -1,15 +1,19 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { getTranslations } from "@/translations";
+const currentLocale = Astro.currentLocale as 'es' | 'en' || 'es';
+const t = getTranslations(currentLocale);
+const homeHref = currentLocale === 'en' ? '/en/' : '/';
 ---
 
-<Layout title="404 - Página no encontrada" noindex={true}>
+<Layout title={t.notFound.seoTitle} noindex={true}>
   <div class="min-h-screen flex flex-col justify-center items-center">
     <div class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl shadow-xl border-2 border-sky-900/30 p-8 text-center">
       <h1 class="text-5xl font-bold text-white mb-2">404</h1>
-      <h2 class="text-2xl font-semibold text-sky-200 mb-4">Página no encontrada</h2>
-      <p class="text-slate-200 mb-2">Lo sentimos, no pudimos encontrar la página que estás buscando.</p>
-      <a href="/" class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-400/20 to-cyan-400/20 text-sky-200 border border-sky-500/30 px-4 py-2 rounded-md hover:bg-sky-400/40 transition-all duration-200 shadow-sm">
-        Volver al inicio
+      <h2 class="text-2xl font-semibold text-sky-200 mb-4">{t.notFound.title}</h2>
+      <p class="text-slate-200 mb-2">{t.notFound.description}</p>
+      <a href={homeHref} class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-400/20 to-cyan-400/20 text-sky-200 border border-sky-500/30 px-4 py-2 rounded-md hover:bg-sky-400/40 transition-all duration-200 shadow-sm">
+        {t.notFound.backHome}
       </a>
     </div>
   </div>
