@@ -6,6 +6,7 @@
 	  "email": "salinasgiovanni25@gmail.com",
 	  "phone": "+56950717726",
 	  "url": "https://potatox.me",
+	  "cvUrl": "/resources/CV_Giovanni_Rodrigo_Salinas_Villa.pdf",
 	  "summary": "Mi nombre es Giovanni Salinas Villa, tengo 23 años y soy Ingeniero en Informática. Cuento con experiencia en integracion de API's, cuento con un buen manejo de lenguajes de programación. Paralelamente a mis estudios, me he dedicado al aprendizaje autodidacta en ciberseguridad, explorando diversas metodologías y herramientas para proteger sistemas e información de las amenazas digitales. Tengo experiencia en herramientas de integración continuo como Git y Jira, y me gusta colaborar con equipos para desarrollar soluciones que sean tanto escalables como eficientes.",
 	  "location": {
 		"address": "",
@@ -29,7 +30,7 @@
 		"name": "Patrimore",
 		"position": "Front-end Developer",
 		"url": "https://patrimore.com/",
-		"startDate": "02-06-2025",
+		"startDate": "2025-06-02",
 		"endDate": "",
 		"summary": "Desarrollador frontend enfocado en la creación de interfaces web funcionales, accesibles y responsivas. Trabajo con herramientas modernas y apoyo de inteligencia artificial para optimizar la construcción de componentes, pantallas y flujos. Encargado de validar y refinar el código generado, manteniendo buenas prácticas de desarrollo en entornos ágiles y colaborativos.",
 		"highlights": [
@@ -40,8 +41,8 @@
 		"name": "Infos Ltda",
 		"position": "Tecnico Instalador",
 		"url": "https://infos.cl/",
-		"startDate": "01-03-2025",
-		"endDate": "31-03-2025",
+		"startDate": "2025-03-01",
+		"endDate": "2025-03-31",
 		"summary": "Técnico instalador con experiencia en la instalación de media tensión (MT) y todo tipo de cableado: fibra óptica, redes, audio y eléctrico. Especializado en mantenimiento de equipos, resolución de problemas de manera remota, y configuración e instalación de servidores, racks, cámaras DVR, switches y routers. Comprometido con ofrecer soluciones eficientes y de alta calidad en cada proyecto, garantizando el correcto funcionamiento y rendimiento de los sistemas instalados.",
 		"highlights": [
 		  ""
@@ -51,8 +52,8 @@
 		"name": "TestGroup",
 		"position": "Analista de TI - Práctica Profesional",
 		"url": "https://testgroup.cl/",
-		"startDate": "15-01-2024",
-		"endDate": "13-03-2024",
+		"startDate": "2024-01-15",
+		"endDate": "2024-03-13",
 		"summary": "Práctica de Seguridad de Sistemas Informáticos, adquiriendo conocimientos clave en protección de infraestructuras de TI y gestión de riesgos de seguridad. Comprometido con el aprendizaje continuo en el ámbito empresarial.",
 		"highlights": [
 			""
@@ -62,8 +63,8 @@
 		"name": "TRES60",
 		"position": "Técnico Ayudante",
 		"url": "https://www.tres60.cl/",
-		"startDate": "11-12-2019",
-		"endDate": "11-03-2020",
+		"startDate": "2019-12-11",
+		"endDate": "2020-03-11",
 		"summary": "Técnico Ayudante en minera Anglo American, Los Bronces. Trabajo en sistema Rajant, enlaces punto a punto en mina, sistema Cas -Cam, Cctv y sistemas de telecomunicaciones en flota",
 		"highlights": [
 		  ""
@@ -83,10 +84,10 @@
 	"education": [{
 	  "institution": "Universidad Inacap",
 	  "url": "https://portales.inacap.cl/",
-	  "area": "Ingenería en Informática",
-	  "studyType": "Ingenería",
-	  "startDate": "2020",
-	  "endDate": "2024",
+	  "area": "Ingeniería en Informática",
+	  "studyType": "Ingeniería",
+	  "startDate": "2020-01-01",
+	  "endDate": "2024-01-01",
 	  "score": "6.0",
 	  "courses": [
 		"TIDS01 - Fundamentos de Programación",
@@ -104,10 +105,10 @@
 	{
 		"institution": "Colegio San Damián de Molokai",
 		"url": "http://www.beleneduca.cl/colegiosandamianmolokai/",
-		"area": "Tecnico medio en telecomunicaciones",
-		"studyType": "Tecnico",
-		"startDate": "2018",
-		"endDate": "2019",
+		"area": "Técnico medio en telecomunicaciones",
+		"studyType": "Técnico",
+		"startDate": "2018-01-01",
+		"endDate": "2019-01-01",
 		"score": "6.3",
 		"courses": [
 		  ""

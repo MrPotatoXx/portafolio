@@ -1,16 +1,45 @@
 ---
 import Section from "@/components/Section.astro";
-import { education } from "@cv";
+import { getTranslations, getCv } from "@/translations";
+
+const currentLocale = Astro.currentLocale as 'es' | 'en' || 'es';
+const t = getTranslations(currentLocale);
+const cv = getCv(currentLocale);
+
+const formatScore = (value: any) => {
+  try {
+    const num = typeof value === 'number' ? value : Number(String(value).replace(',', '.'));
+    if (Number.isNaN(num)) return null;
+    return new Intl.NumberFormat(currentLocale).format(num);
+  } catch {
+    return value ?? null;
+  }
+};
+
+const getYear = (dateStr?: string) => {
+  try {
+    if (!dateStr) return undefined;
+    const s = String(dateStr).trim();
+    if (!s) return undefined;
+    if (/^\d{4}$/.test(s)) return s; // year-only
+    if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s.slice(0, 4); // ISO
+    if (/^\d{2}-\d{2}-\d{4}$/.test(s)) return s.slice(-4); // DD-MM-YYYY
+    const y = new Date(s).getFullYear();
+    return isNaN(y) ? undefined : String(y);
+  } catch {
+    return undefined;
+  }
+};
 ---
 
-<Section title="Educación">
+<Section title={t.sections.education}>
   <div class="max-w-3xl mx-auto w-full bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl shadow-xl border-2 border-sky-900/30 p-4 md:p-6 mb-4">
     <ul class="flex flex-col gap-8">
       {
-        education.map(({ institution, startDate, endDate, area, score }) => {
-          const startYear = startDate;
-          const endYear = endDate ? endDate : "Actual";
-          const years = `${startYear} - ${endYear}`;
+        (cv.education ?? []).map(({ institution, startDate, endDate, area, score }) => {
+          const startYear = getYear(startDate);
+          const endYear = getYear(endDate) ?? t.education.current;
+          const years = startYear ? `${startYear} - ${endYear}` : `${endYear}`;
 
             return (
               <li class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 shadow-xl border-2 border-sky-900/30 rounded-2xl p-4 md:p-6 text-sm md:text-base">
@@ -22,7 +51,9 @@ import { education } from "@cv";
                     </div>
                     <div class="flex flex-col md:items-end gap-2">
                       <span class="inline-block px-3 py-1 bg-sky-600/20 text-sky-300 rounded-full text-xs font-semibold border border-sky-500/30">{years}</span>
-                      <span class="inline-block px-3 py-1 bg-cyan-600/20 text-cyan-200 rounded-full text-xs font-semibold border border-cyan-500/30">Promedio: {score}</span>
+                      {score != null && (
+                        <span class="inline-block px-3 py-1 bg-cyan-600/20 text-cyan-200 rounded-full text-xs font-semibold border border-cyan-500/30">{t.education.average}: {formatScore(score)}</span>
+                      )}
                     </div>
                   </header>
                 </article>

@@ -1,36 +1,40 @@
 ---
 import Section from "@/components/Section.astro";
-import { projects } from "@cv";
+import { getTranslations, getCv } from "@/translations";
+
+const currentLocale = Astro.currentLocale as 'es' | 'en' || 'es';
+const t = getTranslations(currentLocale);
+const cv = getCv(currentLocale);
 ---
 
-<Section title="Proyectos">
+<Section title={t.sections.projects}>
   <div class="max-w-3xl mx-auto w-full bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl shadow-xl border-2 border-sky-900/30 p-4 md:p-6 mb-4">
     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-8">
       {
-        projects.map(
+        cv.projects.map(
           ({ url, description, highlights, name, isActive }, index) => (
             <li
-              class={`bg-gradient-to-br from-slate-800/80 to-slate-900/80 shadow-xl border-2 border-sky-900/30 rounded-2xl p-4 md:p-6 flex flex-col h-full transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl text-sm md:text-base ${projects.length % 2 !== 0 && index === projects.length - 1 ? "sm:col-start-1 sm:col-span-2" : ""}`}
+              class={`bg-gradient-to-br from-slate-800/80 to-slate-900/80 shadow-xl border-2 border-sky-900/30 rounded-2xl p-4 md:p-6 flex flex-col h-full transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl text-sm md:text-base ${cv.projects.length % 2 !== 0 && index === cv.projects.length - 1 ? "sm:col-start-1 sm:col-span-2" : ""}`}
             >
               <article class="flex flex-col h-full">
                 <header class="flex-grow">
                   <h3 class="mb-2 text-2xl font-bold text-sky-300 flex flex-wrap items-center gap-2">
                     <a
                       href={url}
-                      title={`Ver el proyecto ${name}`}
+                      title={`${t.projects.viewProject} ${name}`}
                       class="hover:underline hover:text-cyan-300 transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {name}
+{name}
                     </a>
                     {isActive ? (
                       <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full animate-pulse">
-                        <span class="w-2 h-2 bg-green-400 rounded-full"></span>Activo
+                        <span class="w-2 h-2 bg-green-400 rounded-full"></span>{t.projects.active}
                       </span>
                     ) : (
                       <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-red-500/20 text-red-400 text-xs font-semibold rounded-full">
-                        <span class="w-2 h-2 bg-red-400 rounded-full"></span>Inactivo
+                        <span class="w-2 h-2 bg-red-400 rounded-full"></span>{t.projects.inactive}
                       </span>
                     )}
                   </h3>

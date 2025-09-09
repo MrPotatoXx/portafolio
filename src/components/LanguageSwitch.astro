@@ -1,0 +1,45 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const currentLocale = Astro.currentLocale || 'es';
+const currentPath = Astro.url.pathname;
+
+// Obtener la ruta base sin el prefijo de idioma
+const getBaseRoute = (path: string) => {
+  if (path === '/en' || path === '/es') return '';
+  if (path.startsWith('/en/')) return path.slice(3);
+  if (path.startsWith('/es/')) return path.slice(3);
+  return path === '/' ? '' : path;
+};
+
+const baseRoute = getBaseRoute(currentPath);
+const esUrl = getRelativeLocaleUrl('es', baseRoute);
+const enUrl = getRelativeLocaleUrl('en', baseRoute);
+---
+
+<div class="fixed top-4 right-4 z-50">
+  <div class="flex items-center gap-1 bg-gray-900/80 backdrop-blur-sm rounded-full p-1 border border-white/10">
+    <a 
+      href={esUrl}
+      class={`px-3 py-1 text-xs font-medium transition-all duration-200 rounded-full ${
+        currentLocale === 'es' 
+          ? 'bg-white text-gray-900' 
+          : 'text-white/70 hover:text-white hover:bg-white/10'
+      }`}
+      aria-label="Cambiar a español"
+    >
+      ES
+    </a>
+    <a 
+      href={enUrl}
+      class={`px-3 py-1 text-xs font-medium transition-all duration-200 rounded-full ${
+        currentLocale === 'en' 
+          ? 'bg-white text-gray-900' 
+          : 'text-white/70 hover:text-white hover:bg-white/10'
+      }`}
+      aria-label="Switch to English"
+    >
+      EN
+    </a>
+  </div>
+</div>
