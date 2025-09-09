@@ -6,6 +6,7 @@
 	  "email": "salinasgiovanni25@gmail.com",
 	  "phone": "+56950717726",
 	  "url": "https://potatox.me",
+	  "cvUrl": "/resources/CV_Giovanni_Rodrigo_Salinas_Villa.pdf",
 	  "summary": "My name is Giovanni Salinas Villa. I am 23 years old and a Computer Engineer. I have experience integrating APIs and a solid command of programming languages. Alongside my studies, I have pursued self-directed learning in cybersecurity, exploring various methodologies and tools to protect systems and information from digital threats. I have experience with continuous integration tools like Git and Jira, and I enjoy collaborating with teams to develop solutions that are both scalable and efficient.",
 	  "location": {
 		"address": "",
@@ -29,7 +30,7 @@
 		"name": "Patrimore",
 		"position": "Frontend Developer",
 		"url": "https://patrimore.com/",
-		"startDate": "02-06-2025",
+		"startDate": "2025-06-02",
 		"endDate": "",
 		"summary": "Frontend developer focused on building functional, accessible, and responsive web interfaces. I work with modern tools and AI assistance to optimize the construction of components, screens, and flows. Responsible for validating and refining generated code, maintaining best development practices in agile and collaborative environments.",
 		"highlights": [
@@ -40,8 +41,8 @@
 		"name": "Infos Ltda",
 		"position": "Installation Technician",
 		"url": "https://infos.cl/",
-		"startDate": "01-03-2025",
-		"endDate": "31-03-2025",
+		"startDate": "2025-03-01",
+		"endDate": "2025-03-31",
 		"summary": "Installation technician with experience in medium voltage (MV) installation and all types of cabling: fiber optics, networks, audio, and electrical. Specialized in equipment maintenance, remote troubleshooting, and configuration/installation of servers, racks, DVR cameras, switches, and routers. Committed to delivering efficient, high-quality solutions, ensuring proper operation and performance of installed systems.",
 		"highlights": [
 		  ""
@@ -51,8 +52,8 @@
 		"name": "TestGroup",
 		"position": "IT Analyst - Professional Internship",
 		"url": "https://testgroup.cl/",
-		"startDate": "15-01-2024",
-		"endDate": "13-03-2024",
+		"startDate": "2024-01-15",
+		"endDate": "2024-03-13",
 		"summary": "Information Systems Security internship, acquiring key knowledge in protecting IT infrastructure and managing security risks. Committed to continuous learning in the business context.",
 		"highlights": [
 			""
@@ -62,8 +63,8 @@
 		"name": "TRES60",
 		"position": "Assistant Technician",
 		"url": "https://www.tres60.cl/",
-		"startDate": "11-12-2019",
-		"endDate": "11-03-2020",
+		"startDate": "2019-12-11",
+		"endDate": "2020-03-11",
 		"summary": "Assistant Technician at Anglo American mine, Los Bronces. Work with Rajant system, point-to-point links in the mine, CAS-Cam system, CCTV, and telecommunications systems in the fleet.",
 		"highlights": [
 		  ""
@@ -85,8 +86,8 @@
 	  "url": "https://portales.inacap.cl/",
 	  "area": "Computer Engineering",
 	  "studyType": "Engineering",
-	  "startDate": "2020",
-	  "endDate": "2024",
+	  "startDate": "2020-01-01",
+	  "endDate": "2024-01-01",
 	  "score": "6.0",
 	  "courses": [
 		"TIDS01 - Programming Fundamentals",
@@ -106,8 +107,8 @@
 		"url": "http://www.beleneduca.cl/colegiosandamianmolokai/",
 		"area": "Telecommunications Technician",
 		"studyType": "Technician",
-		"startDate": "2018",
-		"endDate": "2019",
+		"startDate": "2018-01-01",
+		"endDate": "2019-01-01",
 		"score": "6.3",
 		"courses": [
 		  ""
@@ -122,55 +123,55 @@
 	"certificates": [
 		{
 		  "name": "Practical Cybersecurity: Servers and Workstations",
-		  "date": "Jan. 2024",
+		  "date": "2024-01-01",
 		  "issuer": "LinkedIn",
 		  "url": "https://www.linkedin.com/learning/certificates/cb656f872500bddf8c572ea59cba87d3d212d5138150ddd807c89c65db1e9517"
 		},
 		{
 		  "name": "Cybersecurity Awareness: Cybersecurity Terminology",
-		  "date": "Jan. 2024",
+		  "date": "2024-01-01",
 		  "issuer": "LinkedIn",
 		  "url": "https://www.linkedin.com/learning/certificates/a935c30812cf8677f3bb487955ff1bceb51b4eed072fea81eae3e6617ab3e146"
 		},
 		{
 		  "name": "Governance, Risk and Compliance for Information Security (CompTIA Security+ SY0-601)",
-		  "date": "Jan. 2024",
+		  "date": "2024-01-01",
 		  "issuer": "LinkedIn",
 		  "url": "https://www.linkedin.com/learning/certificates/33acf1867facc7c2b2584f7f40221737b8f0bdc3cda63407d4057badf2821526"
 		},
 		{
 		  "name": "Scrum Fundamentals Certified (SFC)",
-		  "date": "Jan. 2024",
+		  "date": "2024-01-01",
 		  "issuer": "SCRUMstudy - Accreditation Body for Scrum and Agile",
 		  "url": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1013920"
 		},
 		{
 		  "name": "Ethical Hacker",
-		  "date": "Dec. 2023",
+		  "date": "2023-12-01",
 		  "issuer": "Cisco",
 		  "url": "https://www.credly.com/badges/0c8c69cf-e8ed-4689-8736-789ef92d3596/linked_in_profile"
 		},
 		{
 		  "name": "Python Essentials 2",
-		  "date": "Nov. 2023",
+		  "date": "2023-11-01",
 		  "issuer": "Cisco",
 		  "url": "https://www.credly.com/badges/76a09637-9bce-4990-a323-62c67f673579/linked_in_profile"
 		},
 		{
 		  "name": "Workshop ISO 27001",
-		  "date": "Nov. 2023",
+		  "date": "2023-11-01",
 		  "issuer": "HackerMentor",
 		  "url": "https://credsverse.com/credentials/80ba8339-b92d-4fdc-8bff-36b871e8ba4d"
 		},
 		{
 		  "name": "Cybersecurity Essentials",
-		  "date": "Aug. 2021",
+		  "date": "2021-08-01",
 		  "issuer": "Cisco",
 		  "url": "https://www.credly.com/earner/earned/badge/d93dbb3a-f663-4d20-b589-51579ec2bfce"
 		},
 		{
 		  "name": "Introduction to Cybersecurity",
-		  "date": "Jun. 2021",
+		  "date": "2021-06-01",
 		  "issuer": "Cisco",
 		  "url": "https://www.credly.com/badges/9a3f0f99-23ff-4da0-8456-dd8d2c8e09cf?source=linked_in_profile"
 		}
