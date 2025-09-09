@@ -6,6 +6,7 @@ const currentPath = Astro.url.pathname;
 
 // Obtener la ruta base sin el prefijo de idioma
 const getBaseRoute = (path: string) => {
+  if (path === '/en' || path === '/es') return '';
   if (path.startsWith('/en/')) return path.slice(3);
   if (path.startsWith('/es/')) return path.slice(3);
   return path === '/' ? '' : path;

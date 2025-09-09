@@ -5,6 +5,21 @@ import { getTranslations, getCv } from "@/translations";
 const currentLocale = Astro.currentLocale as 'es' | 'en' || 'es';
 const t = getTranslations(currentLocale);
 const cv = getCv(currentLocale);
+
+const getYear = (dateStr?: string) => {
+  try {
+    if (!dateStr) return undefined;
+    const s = String(dateStr).trim();
+    if (!s) return undefined;
+    if (/^\d{4}$/.test(s)) return s;
+    if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s.slice(0, 4);
+    if (/^\d{2}-\d{2}-\d{4}$/.test(s)) return s.slice(-4);
+    const y = new Date(s).getFullYear();
+    return isNaN(y) ? undefined : String(y);
+  } catch {
+    return undefined;
+  }
+};
 ---
 
 <Section title={t.sections.experience}>
@@ -12,13 +27,9 @@ const cv = getCv(currentLocale);
     <ul class="flex flex-col gap-8">
       {
         cv.work.map(({ name, startDate, endDate, position, summary }) => {
-          const startYear = new Date(
-            startDate.split("-").reverse().join("-"),
-          ).getFullYear();
-          const endYear = endDate
-            ? new Date(endDate.split("-").reverse().join("-")).getFullYear()
-            : t.experience.current;
-          const years = `${startYear} - ${endYear}`;
+          const startYear = getYear(startDate);
+          const endYear = getYear(endDate) ?? t.experience.current;
+          const years = startYear ? `${startYear} - ${endYear}` : `${endYear}`;
 
           return (
               <li class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 shadow-xl border-2 border-sky-900/30 rounded-2xl p-4 md:p-6 text-sm md:text-base">
