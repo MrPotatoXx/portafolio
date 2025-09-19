@@ -39,6 +39,7 @@ export const translations = {
     technologies: 'Technologies',
     active: 'Active',
     inactive: 'Inactive',
+    inDevelopment: 'In development',
     viewProject: 'View project',
     viewCertificate: 'View certificate'
   },
