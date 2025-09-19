@@ -410,6 +410,17 @@
 	}],
 	"projects": [
 		{
+			"name": "Job Finder",
+			"isActive": false,
+			"status": "en desarrollo",
+			"description": "Web platform that helps search for job offers according to specific user criteria, aggregating offers from multiple job platforms in one place.",
+			"highlights": [
+				"Customized search",
+				"Integration with multiple platforms"
+			],
+			"url": "https://jobfinder.potatox.me/"
+		},
+		{
 			"name": "compu-rescue",
 			"isActive": false,
 			"description": "This is a web application that uses AI to diagnose and facilitate common solutions for laptops and desktop computers.",

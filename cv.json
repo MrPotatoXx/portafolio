@@ -409,6 +409,17 @@
 	}],
 	"projects": [
 		{
+			"name": "Job Finder",
+			"isActive": false,
+			"status": "en desarrollo",
+			"description": "Plataforma web que ayuda a buscar ofertas de trabajo según criterios específicos del usuario, agregando ofertas de múltiples plataformas de empleo en un solo lugar.",
+			"highlights": [
+				"Búsqueda personalizada",
+				"Integración con múltiples plataformas"
+			],
+			"url": "https://jobfinder.potatox.me/"
+		},
+		{
 			"name": "compu-rescue",
 			"isActive": false,
 			"description": "Esta es una aplicación web que utiliza IA para diagnosticar y facilitar posibles solucione comunes en computadoras portátiles y de escritorio. ",
