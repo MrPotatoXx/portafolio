@@ -32,6 +32,11 @@ export const cvTranslations = {
   ],
   projects: [
     {
+      name: 'Job Finder',
+      description:
+        'Web platform that helps search for job offers according to specific user criteria, aggregating offers from multiple job platforms in one place.',
+    },
+    {
       name: 'compu-rescue',
       description:
         'Web app that uses AI to diagnose and provide common solutions for laptops and desktops.',

@@ -12,7 +12,7 @@ const cv = getCv(currentLocale);
     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-8">
       {
         cv.projects.map(
-          ({ url, description, highlights, name, isActive }, index) => (
+          ({ url, description, highlights, name, isActive, status }, index) => (
             <li
               class={`bg-gradient-to-br from-slate-800/80 to-slate-900/80 shadow-xl border-2 border-sky-900/30 rounded-2xl p-4 md:p-6 flex flex-col h-full transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl text-sm md:text-base ${cv.projects.length % 2 !== 0 && index === cv.projects.length - 1 ? "sm:col-start-1 sm:col-span-2" : ""}`}
             >
@@ -28,7 +28,11 @@ const cv = getCv(currentLocale);
                     >
 {name}
                     </a>
-                    {isActive ? (
+                    {status === 'en desarrollo' ? (
+                      <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-yellow-500/20 text-yellow-400 text-xs font-semibold rounded-full animate-pulse">
+                        <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>{t.projects.inDevelopment}
+                      </span>
+                    ) : isActive ? (
                       <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full animate-pulse">
                         <span class="w-2 h-2 bg-green-400 rounded-full"></span>{t.projects.active}
                       </span>

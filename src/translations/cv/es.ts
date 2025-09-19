@@ -32,6 +32,11 @@ export const cvTranslations = {
   ],
   projects: [
     {
+      name: 'Job Finder',
+      description:
+        'Plataforma web que ayuda a buscar ofertas de trabajo según criterios específicos del usuario, agregando ofertas de múltiples plataformas de empleo en un solo lugar.',
+    },
+    {
       name: 'compu-rescue',
       description:
         'Aplicación web que utiliza IA para diagnosticar y facilitar soluciones comunes en computadores portátiles y de escritorio.',
