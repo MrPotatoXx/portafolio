@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from '@astrojs/sitemap';
 
@@ -14,8 +14,16 @@ export default defineConfig({
 		locales: ['es', 'en'],
 		defaultLocale: 'es',
 		routing: {
-			prefixDefaultLocale: false,
-			redirectToDefaultLocale: true
+			prefixDefaultLocale: false
 		}
+	},
+	fonts: [{
+		provider: fontProviders.google(),
+		name: "Source Code Pro",
+		cssVariable: "--font-source-code-pro",
+		weights: [400, 700]
+	}],
+	security: {
+		csp: true
 	}
 });

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  font-family: "Source Code Pro", monospace;
+  font-family: var(--font-source-code-pro), monospace;
 }
 
 .bg-dark-gradient-dots {

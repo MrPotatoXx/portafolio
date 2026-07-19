@@ -2,6 +2,7 @@
 import Analytics from '@vercel/analytics/astro'
 import SpeedInsights from "@vercel/speed-insights/astro"
 import LanguageSwitch from "@/components/LanguageSwitch.astro";
+import { Font } from "astro:assets";
 
 import "../styles/global.css";
 import { getCv } from "@/translations";
@@ -104,12 +105,7 @@ const websiteSchema = {
 		<meta property="og:site_name" content="Giovanni Salinas" />
 		<meta property="og:locale" content="es_CL" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
+		<Font cssVariable="--font-source-code-pro" preload />
 
 		<script type="application/ld+json" is:inline set:html={JSON.stringify(personSchema)}></script>
 		<script type="application/ld+json" is:inline set:html={JSON.stringify(websiteSchema)}></script>
