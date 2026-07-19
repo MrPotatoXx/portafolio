@@ -1,11 +1,21 @@
 export const translations = {
   sections: {
+    hero: 'Home',
     about: 'About me',
     experience: 'Experience',
     education: 'Education',
     projects: 'Projects',
     courses: 'Courses',
     skills: 'Skills'
+  },
+  sectionIds: {
+    hero: 'home',
+    about: 'about',
+    experience: 'experience',
+    education: 'education',
+    projects: 'projects',
+    courses: 'courses',
+    skills: 'skills'
   },
   meta: {
     title: 'Giovanni Salinas - Portfolio',

@@ -1,0 +1,138 @@
+---
+import { getTranslations } from "@/translations";
+
+const currentLocale = Astro.currentLocale as 'es' | 'en' || 'es';
+const t = getTranslations(currentLocale);
+
+const items = [
+  { id: t.sectionIds.hero, label: t.sections.hero },
+  { id: t.sectionIds.about, label: t.sections.about },
+  { id: t.sectionIds.experience, label: t.sections.experience },
+  { id: t.sectionIds.education, label: t.sections.education },
+  { id: t.sectionIds.projects, label: t.sections.projects },
+  { id: t.sectionIds.courses, label: t.sections.courses },
+  { id: t.sectionIds.skills, label: t.sections.skills },
+];
+---
+
+<nav
+  aria-label={t.sections.hero}
+  class="section-nav hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 z-40"
+>
+  <div class="nav-rail relative flex flex-col items-center gap-6 py-2">
+    <div class="nav-track absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-sky-100/10"></div>
+    <div class="nav-progress absolute left-1/2 -translate-x-1/2 top-0 w-px bg-gradient-to-b from-sky-400 to-cyan-400"></div>
+    {
+      items.map(({ id, label }) => (
+        <a
+          href={`#${id}`}
+          data-nav-link={id}
+          aria-label={label}
+          class="group relative z-10 flex items-center justify-center w-2.5 h-2.5"
+        >
+          <span class="nav-dot w-2.5 h-2.5 rounded-full border-2 border-sky-500/50 bg-slate-900 transition-all duration-200 group-hover:border-sky-300" />
+          <span class="nav-label absolute left-full top-1/2 -translate-y-1/2 ml-3 text-xs font-medium text-sky-200 bg-slate-900/90 border border-sky-900/40 rounded-md px-2 py-1 opacity-0 -translate-x-1 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 whitespace-nowrap">
+            {label}
+          </span>
+        </a>
+      ))
+    }
+  </div>
+</nav>
+
+<style>
+  .nav-progress {
+    height: 0px;
+    transition: height 0.2s ease-out;
+  }
+
+  .nav-link-active .nav-dot {
+    background-color: #38bdf8;
+    border-color: #7dd3fc;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+  }
+
+  .nav-link-active .nav-label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .section-nav.intro-reveal .nav-label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+</style>
+
+<script>
+  const links = document.querySelectorAll<HTMLAnchorElement>('[data-nav-link]');
+  const ids = Array.from(links)
+    .map((link) => link.dataset.navLink)
+    .filter((id): id is string => Boolean(id));
+  const sections = ids.map((id) => document.getElementById(id)).filter((el): el is HTMLElement => el !== null);
+
+  const setActive = (id: string) => {
+    links.forEach((link) => {
+      link.classList.toggle('nav-link-active', link.dataset.navLink === id);
+    });
+  };
+
+  const rail = document.querySelector<HTMLElement>('.nav-rail');
+  const progressEl = document.querySelector<HTMLElement>('.nav-progress');
+  const referenceY = 150; // px from top of viewport used as the "active" line
+
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+
+    // Active section = last one whose top has already crossed the reference line.
+    let currentId = sections[0]?.id;
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top <= referenceY) {
+        currentId = section.id;
+      } else {
+        break;
+      }
+    }
+
+    // Bottom of the page: the last section may never reach the reference line
+    // if there isn't enough scroll room left, so force it active in that case.
+    const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+    if (atBottom && sections.length > 0) {
+      currentId = sections[sections.length - 1].id;
+    }
+
+    if (currentId) {
+      setActive(currentId);
+
+      // Fill the rail up to the active dot's own position, not by scroll percentage,
+      // so it always matches the section the nav says is active.
+      if (progressEl && rail) {
+        const activeLink = rail.querySelector<HTMLElement>(`[data-nav-link="${currentId}"]`);
+        if (activeLink) {
+          const y = activeLink.offsetTop + activeLink.offsetHeight / 2;
+          progressEl.style.height = `${y}px`;
+        }
+      }
+    }
+  };
+
+  const onScroll = () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  };
+
+  update();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+
+  // Briefly reveal every label on first load so a new visitor learns what the
+  // dots mean, then collapse back to hover/active-only.
+  const nav = document.querySelector<HTMLElement>('.section-nav');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (nav && !prefersReducedMotion) {
+    nav.classList.add('intro-reveal');
+    setTimeout(() => nav.classList.remove('intro-reveal'), 2200);
+  }
+</script>

@@ -14,7 +14,7 @@ const skillsByCategory = categoryOrder.map((category) => ({
 }));
 ---
 
-<Section title={t.sections.skills}>
+<Section id={t.sectionIds.skills} title={t.sections.skills}>
   <div class="max-w-3xl mx-auto w-full bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl shadow-xl border-2 border-sky-900/30 p-4 md:p-6 mb-4 flex flex-col gap-5">
     {
       skillsByCategory.map(({ label, skills }) => (

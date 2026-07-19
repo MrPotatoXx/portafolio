@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import { getTranslations } from "@/translations";
 
+import SectionNav from "@/components/SectionNav.astro";
 import About from "@/components/indexsections/About.astro";
 import Education from "@/components/indexsections/Education.astro";
 import Experience from "@/components/indexsections/Experience.astro";
@@ -14,6 +15,7 @@ const t = getTranslations('es');
 ---
 
 <Layout title={t.meta.title} description={t.meta.description}>
+  <SectionNav />
   <div class="flex justify-center items-center min-h-screen mt-20">
     <div class="max-w-screen-lg">
       <Hero />

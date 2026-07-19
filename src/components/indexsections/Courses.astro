@@ -36,7 +36,7 @@ const badgeGroups = badgeCerts.reduce<Record<string, typeof badgeCerts>>((groups
 }, {});
 ---
 
-<Section title={t.sections.courses}>
+<Section id={t.sectionIds.courses} title={t.sections.courses}>
   <div class="max-w-3xl mx-auto w-full bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl shadow-xl border-2 border-sky-900/30 p-4 md:p-6 mb-4">
     <ul class="flex flex-col gap-3">
       {
