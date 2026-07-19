@@ -31,19 +31,19 @@ cd portafolio
 ### Instala las dependencias
 
 ```bash
-npm install
+pnpm install
 ```
 ### Ejecuta el servidor de desarrollo
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 ## 📦 Construir para Producción
 
 Para construir el sitio para producción, simplemente corre:
 
 ```bash
-npm run build
+pnpm run build
 ```
 ## 🤝 Contribuciones
 
