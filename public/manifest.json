@@ -1,0 +1,15 @@
+{
+  "name": "Portafolio de Giovanni Salinas",
+  "short_name": "Giovanni Salinas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}
