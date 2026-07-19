@@ -7,7 +7,7 @@
 	  "phone": "+56950717726",
 	  "url": "https://potatox.me",
 	  "cvUrl": "/resources/CV_Giovanni_Rodrigo_Salinas_Villa.pdf",
-	  "summary": "My name is Giovanni Salinas Villa. I am 23 years old and a Computer Engineer. I have experience integrating APIs and a solid command of programming languages. Alongside my studies, I have pursued self-directed learning in cybersecurity, exploring various methodologies and tools to protect systems and information from digital threats. I have experience with continuous integration tools like Git and Jira, and I enjoy collaborating with teams to develop solutions that are both scalable and efficient.",
+	  "summary": "My name is Giovanni Salinas Villa. I am 24 years old and a Computer Engineer. I have experience integrating APIs and a solid command of programming languages. Alongside my studies, I have pursued self-directed learning in cybersecurity, exploring various methodologies and tools to protect systems and information from digital threats. I have experience with continuous integration tools like Git and Jira, and I enjoy collaborating with teams to develop solutions that are both scalable and efficient.",
 	  "location": {
 		"address": "",
 		"postalCode": "9020000",
@@ -27,11 +27,22 @@
 	  }]
 	},
 	"work": [{
+		"name": "Entel",
+		"position": "Trainee Developer",
+		"url": "https://www.entel.cl/",
+		"startDate": "2026-03-01",
+		"endDate": "",
+		"summary": "Trainee Developer at Entel within the technology area. Currently participating in initiatives related to data analysis and artificial intelligence, collaborating with the team on developing data-based solutions, learning new technological tools, and applying software development best practices.",
+		"highlights": [
+			""
+		]
+		},
+		{
 		"name": "Patrimore",
 		"position": "Frontend Developer",
 		"url": "https://patrimore.com/",
 		"startDate": "2025-06-02",
-		"endDate": "",
+		"endDate": "2025-09-30",
 		"summary": "Frontend developer focused on building functional, accessible, and responsive web interfaces. I work with modern tools and AI assistance to optimize the construction of components, screens, and flows. Responsible for validating and refining generated code, maintaining best development practices in agile and collaborative environments.",
 		"highlights": [
 			""
@@ -41,7 +52,7 @@
 		"name": "Infos Ltda",
 		"position": "Installation Technician",
 		"url": "https://infos.cl/",
-		"startDate": "2025-03-01",
+		"startDate": "2025-04-01",
 		"endDate": "2025-05-31",
 		"summary": "Installation technician with experience in medium voltage (MV) installation and all types of cabling: fiber optics, networks, audio, and electrical. Specialized in equipment maintenance, remote troubleshooting, and configuration/installation of servers, racks, DVR cameras, switches, and routers. Committed to delivering efficient, high-quality solutions, ensuring proper operation and performance of installed systems.",
 		"highlights": [
@@ -53,7 +64,7 @@
 		"position": "IT Analyst - Professional Internship",
 		"url": "https://testgroup.cl/",
 		"startDate": "2024-01-15",
-		"endDate": "2024-09-13",
+		"endDate": "2024-03-31",
 		"summary": "Information Systems Security internship, acquiring key knowledge in protecting IT infrastructure and managing security risks. Committed to continuous learning in the business context.",
 		"highlights": [
 			""
@@ -71,12 +82,12 @@
 		]
 	  }],
 	"volunteer": [{
-	  "organization": "",
-	  "position": "",
+	  "organization": "AWS Community Day",
+	  "position": "Volunteer",
 	  "url": "",
-	  "startDate": "",
-	  "endDate": "",
-	  "summary": "",
+	  "startDate": "2024-11-01",
+	  "endDate": "2024-11-30",
+	  "summary": "I volunteered at AWS Community Day, an event that brings together the community of developers, architects, engineers, and technology enthusiasts to explore the latest innovations and best practices in Amazon Web Services (AWS) cloud computing. During this event, I had the opportunity to collaborate on various activities, from organizing spaces to assisting attendees and facilitating multiple sessions and workshops.",
 	  "highlights": [
 		""
 	  ]
@@ -122,58 +133,165 @@
 	}],
 	"certificates": [
 		{
+		  "name": "Associate Cloud Engineer Certification",
+		  "date": "2026-07-01",
+		  "issuer": "Google",
+		  "url": "https://www.credly.com/badges/28cac49a-ac31-48a8-9758-c5cd32ac5fdd/linked_in_profile",
+		  "hidden": false
+		},
+		{
+		  "name": "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
+		  "date": "2026-06-01",
+		  "issuer": "Oracle",
+		  "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=79F41F4282F690BC00B1E1BDA3E88C59DCCF9917ECB13FC92CA13715823E9A91",
+		  "hidden": false
+		},
+		{
+		  "name": "Develop Your Google Cloud Network Skill Badge",
+		  "date": "2026-05-01",
+		  "issuer": "Google",
+		  "url": "https://www.credly.com/badges/aaec7f52-4e55-4d71-be3a-d918d947c8ad/linked_in_profile",
+		  "hidden": false
+		},
+		{
+		  "name": "Implement Cloud Security Fundamentals on Google Cloud Skill Badge",
+		  "date": "2026-05-01",
+		  "issuer": "Google",
+		  "url": "https://www.credly.com/badges/709b7e7f-965e-4428-a72e-9d34ef6a4d4d/linked_in_profile",
+		  "hidden": false
+		},
+		{
+		  "name": "Create Your First Gemini Enterprise Application",
+		  "date": "2026-05-01",
+		  "issuer": "Google",
+		  "url": "https://www.credly.com/badges/2bd8fd1f-952d-490f-8eb7-65ccc0f8c597/linked_in_profile",
+		  "hidden": false
+		},
+		{
+		  "name": "Build a Secure Google Cloud Network Skill Badge",
+		  "date": "2026-05-01",
+		  "issuer": "Google",
+		  "url": "https://www.credly.com/badges/aea3ea16-859d-4505-8a22-2dee65113a41/linked_in_profile",
+		  "hidden": false
+		},
+		{
+		  "name": "Set Up an App Dev Environment on Google Cloud Skill Badge",
+		  "date": "2026-05-01",
+		  "issuer": "Google",
+		  "url": "https://www.credly.com/badges/ac8d36c9-bb61-4a97-aab5-4e945690cdc7/linked_in_profile",
+		  "hidden": false
+		},
+		{
+		  "name": "Implement Load Balancing on Compute Engine Skill Badge",
+		  "date": "2026-05-01",
+		  "issuer": "Google",
+		  "url": "https://www.credly.com/badges/90ff29ba-12b6-44b6-b0e0-dc59aa2a3c53/linked_in_profile",
+		  "hidden": false
+		},
+		{
+		  "name": "Data Architecture for Data Engineers: Practical Approaches",
+		  "date": "2026-05-01",
+		  "issuer": "Udemy",
+		  "url": "https://ude.my/UC-dfe43c17-b900-4c8f-babf-16bf5a4f36ce",
+		  "hidden": true
+		},
+		{
+		  "name": "Big Data and Spark: Data Engineering with Python and PySpark",
+		  "date": "2026-05-01",
+		  "issuer": "Udemy",
+		  "url": "https://ude.my/UC-44f21689-42a4-42e7-901a-0d7e575487c2",
+		  "hidden": true
+		},
+		{
+		  "name": "Data Engineering for Beginners: Learn SQL, Python & Spark",
+		  "date": "2026-04-01",
+		  "issuer": "Udemy",
+		  "url": "https://www.udemy.com/certificate/UC-475be7fd-31d0-4d8d-adfc-d1029636b535/",
+		  "hidden": true
+		},
+		{
+		  "name": "Fabric Implementor 8.3 (web) - Certification Exam",
+		  "date": "2026-04-01",
+		  "issuer": "K2view",
+		  "url": "https://academy.k2view.com/c/p0vUoreFTKqFZqP8tO6ieQ",
+		  "hidden": false
+		},
+		{
+		  "name": "GenAI for Professionals: 10x Your Productivity",
+		  "date": "2026-03-01",
+		  "issuer": "Udemy",
+		  "url": "https://udemy-certificate.s3.amazonaws.com/pdf/UC-e46d0ba7-8c2a-4f92-82e5-7449c9a16c66.pdf",
+		  "hidden": true
+		},
+		{
 		  "name": "Practical Cybersecurity: Servers and Workstations",
 		  "date": "2024-01-01",
 		  "issuer": "LinkedIn",
-		  "url": "https://www.linkedin.com/learning/certificates/cb656f872500bddf8c572ea59cba87d3d212d5138150ddd807c89c65db1e9517"
+		  "url": "https://www.linkedin.com/learning/certificates/cb656f872500bddf8c572ea59cba87d3d212d5138150ddd807c89c65db1e9517",
+		  "hidden": true
 		},
 		{
 		  "name": "Cybersecurity Awareness: Cybersecurity Terminology",
 		  "date": "2024-01-01",
 		  "issuer": "LinkedIn",
-		  "url": "https://www.linkedin.com/learning/certificates/a935c30812cf8677f3bb487955ff1bceb51b4eed072fea81eae3e6617ab3e146"
+		  "url": "https://www.linkedin.com/learning/certificates/a935c30812cf8677f3bb487955ff1bceb51b4eed072fea81eae3e6617ab3e146",
+		  "hidden": true
 		},
 		{
 		  "name": "Governance, Risk and Compliance for Information Security (CompTIA Security+ SY0-601)",
 		  "date": "2024-01-01",
 		  "issuer": "LinkedIn",
-		  "url": "https://www.linkedin.com/learning/certificates/33acf1867facc7c2b2584f7f40221737b8f0bdc3cda63407d4057badf2821526"
+		  "url": "https://www.linkedin.com/learning/certificates/33acf1867facc7c2b2584f7f40221737b8f0bdc3cda63407d4057badf2821526",
+		  "hidden": true
 		},
 		{
 		  "name": "Scrum Fundamentals Certified (SFC)",
 		  "date": "2024-01-01",
 		  "issuer": "SCRUMstudy - Accreditation Body for Scrum and Agile",
-		  "url": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1013920"
+		  "url": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1013920",
+		  "hidden": false
 		},
 		{
 		  "name": "Ethical Hacker",
 		  "date": "2023-12-01",
 		  "issuer": "Cisco",
-		  "url": "https://www.credly.com/badges/0c8c69cf-e8ed-4689-8736-789ef92d3596/linked_in_profile"
+		  "url": "https://www.credly.com/badges/0c8c69cf-e8ed-4689-8736-789ef92d3596/linked_in_profile",
+		  "hidden": false
 		},
 		{
 		  "name": "Python Essentials 2",
 		  "date": "2023-11-01",
 		  "issuer": "Cisco",
-		  "url": "https://www.credly.com/badges/76a09637-9bce-4990-a323-62c67f673579/linked_in_profile"
+		  "url": "https://www.credly.com/badges/76a09637-9bce-4990-a323-62c67f673579/linked_in_profile",
+		  "hidden": false
+		},
+		{
+		  "name": "Free Gamified Ethical Hacking Course - HACKLAB",
+		  "date": "2023-08-01",
+		  "issuer": "HackerMentor",
+		  "url": "https://credsverse.com/credentials/a976229e-7f0d-40d3-b3b3-e8d385a9adfe",
+		  "hidden": true
 		},
 		{
 		  "name": "Workshop ISO 27001",
 		  "date": "2023-11-01",
 		  "issuer": "HackerMentor",
-		  "url": "https://credsverse.com/credentials/80ba8339-b92d-4fdc-8bff-36b871e8ba4d"
+		  "url": "https://credsverse.com/credentials/80ba8339-b92d-4fdc-8bff-36b871e8ba4d",
+		  "hidden": true
 		},
 		{
 		  "name": "Cybersecurity Essentials",
 		  "date": "2021-08-01",
 		  "issuer": "Cisco",
-		  "url": "https://www.credly.com/earner/earned/badge/d93dbb3a-f663-4d20-b589-51579ec2bfce"
+		  "url": "https://www.credly.com/earner/earned/badge/d93dbb3a-f663-4d20-b589-51579ec2bfce",
+		  "hidden": false
 		},
 		{
 		  "name": "Introduction to Cybersecurity",
 		  "date": "2021-06-01",
 		  "issuer": "Cisco",
-		  "url": "https://www.credly.com/badges/9a3f0f99-23ff-4da0-8456-dd8d2c8e09cf?source=linked_in_profile"
+		  "url": "https://www.credly.com/badges/9a3f0f99-23ff-4da0-8456-dd8d2c8e09cf?source=linked_in_profile",
+		  "hidden": false
 		}
 	  ],
 	"publications": [{
