@@ -137,161 +137,184 @@
 		  "date": "jul. 2026",
 		  "issuer": "Google",
 		  "url": "https://www.credly.com/badges/28cac49a-ac31-48a8-9758-c5cd32ac5fdd/linked_in_profile",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": false
 		},
 		{
 		  "name": "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
 		  "date": "jun. 2026",
 		  "issuer": "Oracle",
 		  "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=79F41F4282F690BC00B1E1BDA3E88C59DCCF9917ECB13FC92CA13715823E9A91",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": false
 		},
 		{
 		  "name": "Develop Your Google Cloud Network Skill Badge",
 		  "date": "may. 2026",
 		  "issuer": "Google",
 		  "url": "https://www.credly.com/badges/aaec7f52-4e55-4d71-be3a-d918d947c8ad/linked_in_profile",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": true
 		},
 		{
 		  "name": "Implement Cloud Security Fundamentals on Google Cloud Skill Badge",
 		  "date": "may. 2026",
 		  "issuer": "Google",
 		  "url": "https://www.credly.com/badges/709b7e7f-965e-4428-a72e-9d34ef6a4d4d/linked_in_profile",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": true
 		},
 		{
 		  "name": "Create Your First Gemini Enterprise Application",
 		  "date": "may. 2026",
 		  "issuer": "Google",
 		  "url": "https://www.credly.com/badges/2bd8fd1f-952d-490f-8eb7-65ccc0f8c597/linked_in_profile",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": true
 		},
 		{
 		  "name": "Build a Secure Google Cloud Network Skill Badge",
 		  "date": "may. 2026",
 		  "issuer": "Google",
 		  "url": "https://www.credly.com/badges/aea3ea16-859d-4505-8a22-2dee65113a41/linked_in_profile",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": true
 		},
 		{
 		  "name": "Set Up an App Dev Environment on Google Cloud Skill Badge",
 		  "date": "may. 2026",
 		  "issuer": "Google",
 		  "url": "https://www.credly.com/badges/ac8d36c9-bb61-4a97-aab5-4e945690cdc7/linked_in_profile",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": true
 		},
 		{
 		  "name": "Implement Load Balancing on Compute Engine Skill Badge",
 		  "date": "may. 2026",
 		  "issuer": "Google",
 		  "url": "https://www.credly.com/badges/90ff29ba-12b6-44b6-b0e0-dc59aa2a3c53/linked_in_profile",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": true
 		},
 		{
 		  "name": "Data Architecture for Data Engineers: Practical Approaches",
 		  "date": "may. 2026",
 		  "issuer": "Udemy",
 		  "url": "https://ude.my/UC-dfe43c17-b900-4c8f-babf-16bf5a4f36ce",
-		  "hidden": true
+		  "hidden": true,
+		  "collapsed": false
 		},
 		{
 		  "name": "Big Data y Spark: ingeniería de datos con Python y pyspark",
 		  "date": "may. 2026",
 		  "issuer": "Udemy",
 		  "url": "https://ude.my/UC-44f21689-42a4-42e7-901a-0d7e575487c2",
-		  "hidden": true
+		  "hidden": true,
+		  "collapsed": false
 		},
 		{
 		  "name": "Data Engineering for Beginners: Learn SQL, Python & Spark",
 		  "date": "abr. 2026",
 		  "issuer": "Udemy",
 		  "url": "https://www.udemy.com/certificate/UC-475be7fd-31d0-4d8d-adfc-d1029636b535/",
-		  "hidden": true
+		  "hidden": true,
+		  "collapsed": false
 		},
 		{
 		  "name": "Fabric Implementor 8.3 (web) - Certification Exam",
 		  "date": "abr. 2026",
 		  "issuer": "K2view",
 		  "url": "https://academy.k2view.com/c/p0vUoreFTKqFZqP8tO6ieQ",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": false
 		},
 		{
 		  "name": "GenAI for Professionals: 10x Your Productivity",
 		  "date": "mar. 2026",
 		  "issuer": "Udemy",
 		  "url": "https://udemy-certificate.s3.amazonaws.com/pdf/UC-e46d0ba7-8c2a-4f92-82e5-7449c9a16c66.pdf",
-		  "hidden": true
+		  "hidden": true,
+		  "collapsed": false
 		},
 		{
 		  "name": "Ciberseguridad práctica: Servidores y estaciones de trabajo",
 		  "date": "ene. 2024",
 		  "issuer": "LinkedIn",
 		  "url": "https://www.linkedin.com/learning/certificates/cb656f872500bddf8c572ea59cba87d3d212d5138150ddd807c89c65db1e9517",
-		  "hidden": true
+		  "hidden": true,
+		  "collapsed": false
 		},
 		{
 		  "name": "Concienciación en ciberseguridad: Terminología de ciberseguridad",
 		  "date": "ene. 2024",
 		  "issuer": "LinkedIn",
 		  "url": "https://www.linkedin.com/learning/certificates/a935c30812cf8677f3bb487955ff1bceb51b4eed072fea81eae3e6617ab3e146",
-		  "hidden": true
+		  "hidden": true,
+		  "collapsed": false
 		},
 		{
 		  "name": "Gobierno, riesgo y cumplimiento para seguridad de la información (CompTIA Security+ SY0-601)",
 		  "date": "ene. 2024",
 		  "issuer": "LinkedIn",
 		  "url": "https://www.linkedin.com/learning/certificates/33acf1867facc7c2b2584f7f40221737b8f0bdc3cda63407d4057badf2821526",
-		  "hidden": true
+		  "hidden": true,
+		  "collapsed": false
 		},
 		{
 		  "name": "Scrum Fundamentals Certified (SFC)",
 		  "date": "ene. 2024",
 		  "issuer": "SCRUMstudy - Accreditation Body for Scrum and Agile",
 		  "url": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1013920",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": false
 		},
 		{
 		  "name": "Ethical Hacker",
 		  "date": "dic. 2023",
 		  "issuer": "Cisco",
 		  "url": "https://www.credly.com/badges/0c8c69cf-e8ed-4689-8736-789ef92d3596/linked_in_profile",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": false
 		},
 		{
 		  "name": "Python Essentials 2",
 		  "date": "nov. 2023",
 		  "issuer": "Cisco",
 		  "url": "https://www.credly.com/badges/76a09637-9bce-4990-a323-62c67f673579/linked_in_profile",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": false
 		},
 		{
 		  "name": "Curso Gratuito Hacking ético Gamificado HACKLAB",
 		  "date": "ago. 2023",
 		  "issuer": "HackerMentor",
 		  "url": "https://credsverse.com/credentials/a976229e-7f0d-40d3-b3b3-e8d385a9adfe",
-		  "hidden": true
+		  "hidden": true,
+		  "collapsed": false
 		},
 		{
 		  "name": "Workshop ISO 27001",
 		  "date": "nov. 2023",
 		  "issuer": "HackerMentor",
 		  "url": "https://credsverse.com/credentials/80ba8339-b92d-4fdc-8bff-36b871e8ba4d",
-		  "hidden": true
+		  "hidden": true,
+		  "collapsed": false
 		},
 		{
 		  "name": "Cybersecurity Essentials",
 		  "date": "ago. 2021",
 		  "issuer": "Cisco",
 		  "url": "https://www.credly.com/earner/earned/badge/d93dbb3a-f663-4d20-b589-51579ec2bfce",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": false
 		},
 		{
 		  "name": "Introduction to Cybersecurity",
 		  "date": "jun. 2021",
 		  "issuer": "Cisco",
 		  "url": "https://www.credly.com/badges/9a3f0f99-23ff-4da0-8456-dd8d2c8e09cf?source=linked_in_profile",
-		  "hidden": false
+		  "hidden": false,
+		  "collapsed": false
 		}],
 	"publications": [{
 	  "name": "",
@@ -304,6 +327,7 @@
     {
       "name": "Pruebas de penetración",
       "level": "Avanzado",
+      "category": "security",
       "keywords": [
         "Hacking ético",
         "Curso Gratuito Hacking ético Gamificado HACKLAB",
@@ -313,6 +337,7 @@
     {
       "name": "Scrum",
       "level": "Intermedio",
+      "category": "soft",
       "keywords": [
         "Scrum Fundamentals Certified (SFC)",
         "Metodologías ágiles"
@@ -321,6 +346,7 @@
     {
       "name": "TI",
       "level": "Avanzado",
+      "category": "cloud",
       "keywords": [
         "Analista de TI",
         "Gestión de servicios de TI"
@@ -329,6 +355,7 @@
     {
       "name": "ISO 27001",
       "level": "Intermedio",
+      "category": "security",
       "keywords": [
         "Workshop ISO 27001",
         "Seguridad de la información"
@@ -337,6 +364,7 @@
     {
       "name": "Ciberseguridad",
       "level": "Avanzado",
+      "category": "security",
       "keywords": [
         "Cybersecurity Essentials",
         "Introduction to Cybersecurity",
@@ -346,6 +374,7 @@
     {
       "name": "Python",
       "level": "Básico",
+      "category": "dev",
       "keywords": [
         "Python Essentials 2"
       ]
@@ -353,6 +382,7 @@
     {
       "name": "Desarrollo web",
       "level": "Intermedio",
+      "category": "dev",
       "keywords": [
         "HTML",
         "CSS",
@@ -363,6 +393,7 @@
     {
       "name": "Hacking ético",
       "level": "Avanzado",
+      "category": "security",
       "keywords": [
         "Curso Gratuito Hacking ético Gamificado HACKLAB",
         "Ethical Hacker"
@@ -371,6 +402,7 @@
     {
       "name": "Microsoft Power BI",
       "level": "Intermedio",
+      "category": "dev",
       "keywords": [
         "Power BI para principiantes: Análisis de datos"
       ]
@@ -378,6 +410,7 @@
     {
       "name": "Resolución de problemas",
       "level": "Avanzado",
+      "category": "soft",
       "keywords": [
         "Técnico Ayudante en TRES60",
         "Experiencias académicas en INACAP"
@@ -386,6 +419,7 @@
     {
       "name": "Liderazgo",
       "level": "Intermedio",
+      "category": "soft",
       "keywords": [
         "Gestión de equipos"
       ]
@@ -393,6 +427,7 @@
     {
       "name": "Discursos en público",
       "level": "Básico",
+      "category": "soft",
       "keywords": [
         "Oratoria"
       ]
@@ -400,6 +435,7 @@
     {
       "name": "Base de Datos",
       "level": "Intermedio",
+      "category": "cloud",
       "keywords": [
         "Administración de bases de datos",
         "Diseño de bases de datos"
@@ -408,6 +444,7 @@
     {
       "name": "SQL",
       "level": "Intermedio",
+      "category": "cloud",
       "keywords": [
         "Consultas SQL",
         "Optimización de consultas"
@@ -416,6 +453,7 @@
     {
       "name": "Office",
       "level": "Avanzado",
+      "category": "soft",
       "keywords": [
         "Microsoft Word",
         "Microsoft Excel",
@@ -425,6 +463,7 @@
     {
       "name": "Linux",
       "level": "Intermedio",
+      "category": "cloud",
       "keywords": [
         "Administración de sistemas Linux",
         "Shell scripting"
@@ -433,6 +472,7 @@
     {
       "name": "Windows",
       "level": "Avanzado",
+      "category": "cloud",
       "keywords": [
         "Administración de sistemas Windows",
         "Solución de problemas"
@@ -441,6 +481,7 @@
     {
       "name": "ETL",
       "level": "Intermedio",
+      "category": "cloud",
       "keywords": [
         "Procesos de extracción, transformación y carga",
         "Talend studio"
@@ -449,6 +490,7 @@
     {
       "name": "GIT",
       "level": "Intermedio",
+      "category": "dev",
       "keywords": [
         "Control de versiones",
         "GitHub"
@@ -457,6 +499,7 @@
     {
       "name": "Jira",
       "level": "Intermedio",
+      "category": "soft",
       "keywords": [
         "Seguimiento de proyectos"
       ]
@@ -464,6 +507,7 @@
     {
       "name": "JavaScript",
       "level": "Intermedio",
+      "category": "dev",
       "keywords": [
         "DOM",
         "Funciones asincrónicas",
@@ -473,6 +517,7 @@
     {
       "name": "Análisis de datos",
       "level": "Intermedio",
+      "category": "dev",
       "keywords": [
         "Limpieza de datos",
         "Visualización con gráficos",
@@ -482,6 +527,7 @@
     {
       "name": "Docker",
       "level": "Básico",
+      "category": "cloud",
       "keywords": [
         "Contenedores",
         "Docker Compose"
@@ -490,6 +536,7 @@
     {
       "name": "Networking",
       "level": "Intermedio",
+      "category": "cloud",
       "keywords": [
         "Modelos OSI y TCP/IP",
         "Configuración de redes",
@@ -499,6 +546,7 @@
     {
       "name": "Documentación técnica",
       "level": "Intermedio",
+      "category": "soft",
       "keywords": [
         "Redacción clara",
         "Confluence",

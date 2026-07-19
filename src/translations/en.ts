@@ -45,7 +45,15 @@ export const translations = {
   },
   courses: {
     certificate: 'Certificate',
-    completed: 'Completed'
+    completed: 'Completed',
+    showBadges: 'Show {count} more {issuer} badges',
+    hideBadges: 'Hide {issuer} badges'
+  },
+  skillCategories: {
+    security: 'Cybersecurity',
+    cloud: 'Cloud & Infrastructure',
+    dev: 'Development & Data',
+    soft: 'Methodologies & Soft Skills'
   },
   notFound: {
     seoTitle: '404 - Page not found',

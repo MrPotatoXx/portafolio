@@ -3,6 +3,8 @@ import Section from "@/components/Section.astro";
 import Certificate from "@/icons/Certificate.astro";
 import Cisco from "@/icons/Cisco.astro";
 import CertLinkedIn from "@/icons/CertLinkedIn.astro";
+import GoogleCloud from "@/icons/GoogleCloud.astro";
+import Udemy from "@/icons/Udemy.astro";
 import { getTranslations, getCv } from "@/translations";
 
 const currentLocale = Astro.currentLocale as 'es' | 'en' || 'es';
@@ -15,17 +17,30 @@ const getIcon = (issuer: string) => {
       return Cisco;
     case 'linkedin':
       return CertLinkedIn;
+    case 'google':
+      return GoogleCloud;
+    case 'udemy':
+      return Udemy;
     default:
       return Certificate;
   }
 };
+
+const visibleCerts = cv.certificates.filter(({ hidden }) => !hidden);
+const mainCerts = visibleCerts.filter(({ collapsed }) => !collapsed);
+const badgeCerts = visibleCerts.filter(({ collapsed }) => collapsed);
+
+const badgeGroups = badgeCerts.reduce<Record<string, typeof badgeCerts>>((groups, cert) => {
+  (groups[cert.issuer] ??= []).push(cert);
+  return groups;
+}, {});
 ---
 
 <Section title={t.sections.courses}>
   <div class="max-w-3xl mx-auto w-full bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl shadow-xl border-2 border-sky-900/30 p-4 md:p-6 mb-4">
     <ul class="flex flex-col gap-3">
       {
-        cv.certificates.filter(({ hidden }) => !hidden).map(({ name, date, issuer, url }) => {
+        mainCerts.map(({ name, date, issuer, url }) => {
           const Icon = getIcon(issuer);
           return (
             <li class="bg-gradient-to-br from-slate-800/80 to-slate-900/80 shadow-xl border border-sky-900/30 rounded-lg overflow-hidden transition-transform duration-200 hover:scale-[1.02] text-xs md:text-sm">
@@ -53,6 +68,42 @@ const getIcon = (issuer: string) => {
                   </div>
                 </div>
               </div>
+            </li>
+          );
+        })
+      }
+      {
+        Object.entries(badgeGroups).map(([issuer, certs]) => {
+          const Icon = getIcon(issuer);
+          return (
+            <li class="rounded-lg border border-sky-900/30 overflow-hidden">
+              <details class="group">
+                <summary class="flex items-center gap-3 p-3 cursor-pointer bg-gradient-to-br from-slate-800/80 to-slate-900/80 hover:bg-sky-900/20 transition-colors list-none">
+                  <Icon class="w-6 h-6 text-sky-300 flex-shrink-0" />
+                  <span class="text-sm md:text-base text-sky-300 font-bold flex-grow">
+                    {t.courses.showBadges.replace('{count}', String(certs.length)).replace('{issuer}', issuer)}
+                  </span>
+                  <span class="text-sky-400 transition-transform duration-200 group-open:rotate-180">▾</span>
+                </summary>
+                <ul class="flex flex-col divide-y divide-sky-900/30 bg-slate-900/60">
+                  {certs.map(({ name, date, url }) => (
+                    <li class="flex flex-wrap items-center gap-x-2 gap-y-1 px-4 py-2 text-xs md:text-sm">
+                      <span class="text-gray-300">{name}</span>
+                      <span class="text-cyan-300">{date}</span>
+                      {url && (
+                        <a
+                          href={url}
+                          class="ml-auto flex-shrink-0 text-sky-300 hover:text-cyan-300 underline underline-offset-2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+{t.projects.viewCertificate}
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </details>
             </li>
           );
         })
