@@ -2,7 +2,7 @@ export const cvTranslations = {
   basics: {
     label: 'Ingeniero en Informática',
     summary:
-      'Mi nombre es Giovanni Salinas Villa, tengo 23 años y soy Ingeniero en Informática. Cuento con experiencia en integración de APIs y un buen manejo de lenguajes de programación. Paralelamente a mis estudios, me he dedicado al aprendizaje autodidacta en ciberseguridad, explorando metodologías y herramientas para proteger sistemas e información. Tengo experiencia con herramientas de integración continua como Git y Jira, y me gusta colaborar con equipos para desarrollar soluciones escalables y eficientes.',
+      'Mi nombre es Giovanni Salinas Villa, tengo 24 años y soy Ingeniero en Informática. Cuento con experiencia en integración de APIs y un buen manejo de lenguajes de programación. Paralelamente a mis estudios, me he dedicado al aprendizaje autodidacta en ciberseguridad, explorando metodologías y herramientas para proteger sistemas e información. Tengo experiencia con herramientas de integración continua como Git y Jira, y me gusta colaborar con equipos para desarrollar soluciones escalables y eficientes.',
   },
   education: [
     { area: 'Ingeniería en Informática' },
