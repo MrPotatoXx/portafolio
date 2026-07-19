@@ -2,7 +2,7 @@
 	"basics": {
 	  "name": "Giovanni Salinas Villa",
 	  "label": "Computer Engineer",
-	  "image": "https://avatars.githubusercontent.com/MrPotAtoXx",
+	  "image": "https://avatars.githubusercontent.com/MrPotatoXx",
 	  "email": "salinasgiovanni25@gmail.com",
 	  "phone": "+56950717726",
 	  "url": "https://potatox.me",
@@ -22,7 +22,7 @@
 	  },
 	  {
 		"network": "GitHub",
-		"username": "MrPotAtoXx",
+		"username": "MrPotatoXx",
 		"url": "https://github.com/MrPotatoXx"
 	  }]
 	},
@@ -578,7 +578,7 @@
 		{
 			"name": "Job Finder",
 			"isActive": false,
-			"status": "en desarrollo",
+			"status": "in-progress",
 			"description": "Web platform that helps search for job offers according to specific user criteria, aggregating offers from multiple job platforms in one place.",
 			"highlights": [
 				"Customized search",

@@ -3,6 +3,7 @@ import Analytics from '@vercel/analytics/astro'
 import SpeedInsights from "@vercel/speed-insights/astro"
 import LanguageSwitch from "@/components/LanguageSwitch.astro";
 import { Font } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 import "../styles/global.css";
 import { getCv } from "@/translations";
@@ -42,6 +43,17 @@ const canonicalUrlStr = (() => {
 const seoDescription = description ?? defaultDescription;
 const imageUrl = toAbs(image ?? "/favicon.png");
 const robotsContent = noindex ? "noindex, nofollow" : "index, follow";
+const ogLocale = currentLocale === "en" ? "en_US" : "es_CL";
+
+const getBaseRoute = (path: string) => {
+  if (path === "/en" || path === "/es") return "";
+  if (path.startsWith("/en/")) return path.slice(3);
+  if (path.startsWith("/es/")) return path.slice(3);
+  return path === "/" ? "" : path;
+};
+const baseRoute = getBaseRoute(Astro.url.pathname);
+const esHreflangUrl = toAbs(getRelativeLocaleUrl("es", baseRoute));
+const enHreflangUrl = toAbs(getRelativeLocaleUrl("en", baseRoute));
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -87,7 +99,9 @@ const websiteSchema = {
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<link rel="manifest" href="/manifest.json" />
 		<link rel="canonical" href={canonicalUrlStr} />
-		<link rel="alternate" href={canonicalUrlStr} hreflang="es-cl" />
+		<link rel="alternate" href={esHreflangUrl} hreflang="es" />
+		<link rel="alternate" href={enHreflangUrl} hreflang="en" />
+		<link rel="alternate" href={esHreflangUrl} hreflang="x-default" />
 
 		<meta name="robots" content={robotsContent} />
 		<meta name="googlebot" content={robotsContent} />
@@ -103,7 +117,7 @@ const websiteSchema = {
 		<meta property="og:image" content={imageUrl} />
 		<meta property="og:url" content={canonicalUrlStr} />
 		<meta property="og:site_name" content="Giovanni Salinas" />
-		<meta property="og:locale" content="es_CL" />
+		<meta property="og:locale" content={ogLocale} />
 
 		<Font cssVariable="--font-source-code-pro" preload />
 
